@@ -1,0 +1,18 @@
+.Page {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 120%;
+    padding: 0 20%;
+}
+
+.Page__navigate_index {
+    position: absolute;
+    font-size: 180%;
+    top: 0.3em;
+    left: 17.5%;
+}

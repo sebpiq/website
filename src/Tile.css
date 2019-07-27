@@ -1,0 +1,7 @@
+.Tile {
+    font-size: 170%;
+    font-weight: bold;
+    padding-top: 2em;
+    padding-left: 2em;
+    display: flex;
+}
