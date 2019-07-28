@@ -1,7 +1,7 @@
 .BackgroundCanvas {
     position: fixed;
-    /* we want this to appear above tiles */
-    z-index: 2;
+    /* we want this to appear above tiles and Page */
+    z-index: 3;
     top: 0;
     left: 0;
     width: 100%;
@@ -11,4 +11,7 @@
 .BackgroundCanvas.background {
     opacity: 0.45;
     pointer-events: none;
+    /* we want this to still appear above tiles but below Page */
+    z-index: 1;
+
 }

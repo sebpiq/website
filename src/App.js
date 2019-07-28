@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import ReactResizeDetector from 'react-resize-detector'
 import './App.css'
 import BackgroundCanvas from './BackgroundCanvas'
@@ -23,14 +23,19 @@ function App() {
                 <BackgroundCanvas />
             </ReactResizeDetector>
             <Router>
-                <Route path="/" exact component={Index} />
-                <Route path="/freedom-portal/" component={FreedomPortal} />
-                <Route path="/la-jetee/" component={LaJetee} />
-                <Route path="/murmurate/" component={Murmurate} />
-                <Route path="/new-weave/" component={NewWeave} />
-                <Route path="/pure-data-and-raspberry-pi-workshops/" component={PureDataRpiWorkshops} />
-                <Route path="/webpd/" component={WebPd} />
-                <Route path="/possessed-rooms/" component={PossessedRooms} />
+                <Switch>
+                    <Route path="/" exact component={Index} />
+                    <Route path="/freedom-portal/" component={FreedomPortal} />
+                    <Route path="/la-jetee/" component={LaJetee} />
+                    <Route path="/murmurate/" component={Murmurate} />
+                    <Route path="/new-weave/" component={NewWeave} />
+                    <Route path="/pure-data-and-raspberry-pi-workshops/" component={PureDataRpiWorkshops} />
+                    <Route path="/webpd/" component={WebPd} />
+                    <Route path="/possessed-rooms/" component={PossessedRooms} />                
+
+                    <Redirect from="/*" to="/" />
+                    <Route component={Index} />
+                </Switch>
             </Router>
         </div>
     )
