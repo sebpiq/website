@@ -1,0 +1,36 @@
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    body, html, .App, #root {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+    body, html, .App, #root {
+        font-size: 14px;
+    }
+    .Page {
+        padding: 0 2em;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1500px) {
+    .TileContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Switch to single column layout */
+@media (min-width: 0px) and (max-width: 800px) {
+    .TileContainer {
+        display: block;
+    }
+
+    .Tile__body {
+        border: none;
+    }
+
+    .Tile {
+        padding-right: 2em;
+    }
+}

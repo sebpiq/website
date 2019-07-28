@@ -1,0 +1,8 @@
+.CenteredImage {
+    width: 100%;
+    text-align: center;
+}
+
+.CenteredImage img {
+    width: 100%;
+}

@@ -18,9 +18,9 @@ export default function VimeoVideo({ videoId }) {
                         width: '100%',
                         height: '100%',
                     }}
-                    frameborder="0" 
+                    frameBorder="0" 
                     allow="autoplay; fullscreen" 
-                    allowfullscreen
+                    allowFullScreen={true}
                 ></iframe>
             </div>
             <script src="https://player.vimeo.com/api/player.js"></script>

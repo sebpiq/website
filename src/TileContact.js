@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './Tile.css'
 
 
@@ -10,13 +10,13 @@ export default function(props) {
             </div>
             <div className="Tile__body">
                 <div>
-                    <img src="/images/external-link.svg" /><a href="https://github.com/sebpiq">github</a>
+                    <img src="/images/external-link.svg" alt="external link" /><a href="https://github.com/sebpiq">github</a>
                 </div>
                 <div>
-                    <img src="/images/external-link.svg" /><a href="mailto://sebpiq@gmail.com">email</a>
+                    <img src="/images/external-link.svg" alt="external link" /><a href="mailto://sebpiq@gmail.com">email</a>
                 </div>
                 <div>
-                    <img src="/images/external-link.svg" /><a href="https://vimeo.com/sebpiq/">vimeo</a>
+                    <img src="/images/external-link.svg" alt="external link" /><a href="https://vimeo.com/sebpiq/">vimeo</a>
                 </div>
             </div>
         </div>

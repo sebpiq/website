@@ -7,7 +7,7 @@ function renderChildren(isExternalUrl, { header, date, activityType, preview }) 
         <Fragment>
             <div key="header" className="Tile__header">
                 {isExternalUrl ? 
-                    <img className="Tile__external-link" src="/images/external-link.svg" />
+                    <img className="Tile__external-link" src="/images/external-link.svg" alt="home" />
                     : null
                 }
                 <span>{header}</span>
@@ -25,7 +25,7 @@ export default function(props) {
     return (
         <div className="Tile">
             {isExternalUrl ? 
-                <a href={props.url} target="_blank">{renderChildren(isExternalUrl, props)}</a>
+                <a href={props.url} target="_blank" rel="noopener noreferrer">{renderChildren(isExternalUrl, props)}</a>
                 : <Link to={props.url}>{renderChildren(isExternalUrl, props)}</Link>}
         </div>
     )

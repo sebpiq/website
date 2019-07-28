@@ -4,11 +4,11 @@
     padding-left: 2em;
     display: flex;
     flex-direction: column;
-    color: #bbb;
+    color: #ccc;
 }
 
 .Tile a, .Tile a:visited {
-    color: #bbb;
+    color: #ccc;
 }
 
 .Tile__header {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import ReactResizeDetector from 'react-resize-detector'
 import './App.css'
 import BackgroundCanvas from './BackgroundCanvas'
@@ -13,7 +13,8 @@ import NewWeave from './pages/NewWeave'
 import PureDataRpiWorkshops from './pages/PureDataRpiWorkshops'
 import WebPd from './pages/WebPd'
 import PossessedRooms from './pages/PossessedRooms'
-
+// !!! Must be imported last to override other css properties properly
+import './responsive.css'
 
 function App() {
     return (
