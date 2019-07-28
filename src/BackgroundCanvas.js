@@ -2,18 +2,18 @@ import React from 'react'
 import './BackgroundCanvas.css'
 import { getRandomEmoji } from './utils'
 
-const INTERVAL_TIME = 70
+const INTERVAL_TIME = 90
 // e.g. 100/1000 -> 100px font for 1000px screen width (or height if height > width)
-const FONT_SCREEN_RATIO = 750 / 1000
+const FONT_SCREEN_RATIO = 700 / 1000
 const TEXT_COLOR = 'white'
 // Whether to keep previous frame and draw on top of it or erase before each frame 
 const KEEP_PREVIOUS_FRAME = false
 // Size of the square picked for the effect
-const SCRAMBLE_SQUARE_SIZE = 0.25
+const SCRAMBLE_SQUARE_SIZE = 0.22
 // Range (as a ratio) of the area in which the square is picked
-const SCRAMBLE_RANGE = 0.02
+const SCRAMBLE_RANGE = 0.03
 // Number of scrambles per touch / move
-const SCRAMBLE_ITER = 8
+const SCRAMBLE_ITER = 7
 
 export default class BackgroundCanvas extends React.Component {
 
@@ -22,6 +22,9 @@ export default class BackgroundCanvas extends React.Component {
         this.canvasRef = React.createRef()
         this.canvasCtx = null
         this.intervalHandle = null
+        this.state = {
+            background: false
+        }
     }
 
     componentDidMount() {
@@ -40,14 +43,21 @@ export default class BackgroundCanvas extends React.Component {
     }
 
     render() {
+        const classes = 'BackgroundCanvas' + (this.state.background ? ' background' : '')
         return (
             <canvas 
-                className="BackgroundCanvas" 
+                className={classes} 
                 width={this.props.width}
                 height={this.props.height}
-                ref={this.canvasRef} 
+                ref={this.canvasRef}
+                onClick={this.state.background ? undefined : this._backgroundOnfirstClick}
+                onTouchStart={this.state.background ? undefined : this._backgroundOnfirstClick}
             />
         )
+    }
+
+    _backgroundOnfirstClick = () => {
+        this.setState({ background: true })
     }
 
     _refsUpdated() {

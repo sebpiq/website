@@ -1,7 +1,7 @@
 .Tile {
     font-weight: bold;
     padding-top: 2em;
-    padding-left: 2em;
+    padding-left: 0.1em;
     display: flex;
     flex-direction: column;
     color: #ccc;
