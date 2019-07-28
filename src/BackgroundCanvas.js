@@ -51,12 +51,13 @@ export default class BackgroundCanvas extends React.Component {
                 height={this.props.height}
                 ref={this.canvasRef}
                 onClick={this.state.background ? undefined : this._backgroundOnfirstClick}
-                onTouchStart={this.state.background ? undefined : this._backgroundOnfirstClick}
+                // Important to do this onTouchEnd otherwise the user will inadvertently click the links below 
+                onTouchEnd={this.state.background ? undefined : this._backgroundOnfirstClick}
             />
         )
     }
 
-    _backgroundOnfirstClick = () => {
+    _backgroundOnfirstClick = (event) => {
         this.setState({ background: true })
     }
 
