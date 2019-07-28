@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import './Tile.css'
 
-function renderChildren({ header, date, activityType }) {
-    return [
-        <div key="header" className="Tile__header">{header}</div>,
-        <div key="activityType" className="Tile__activityType">{activityType}</div>,
-        <div key="date" className="Tile__date">{date}</div>,
-    ]
+function renderChildren(isExternalUrl, { header, date, activityType, preview }) {
+    return (
+        <Fragment>
+            <div key="header" className="Tile__header">
+                {isExternalUrl ? 
+                    <img className="Tile__external-link" src="/images/external-link.svg" />
+                    : null
+                }
+                <span>{header}</span>
+            </div>
+            <div key="preview" className="Tile__body">{preview}</div>
+            <div key="footer" className="Tile__footer">
+                <div key="date" className="Tile__date">{date}</div> | <div key="activityType" className="Tile__activityType">{activityType}</div>
+            </div>
+        </Fragment>
+    )
 }
 
 export default function(props) {
@@ -15,8 +25,8 @@ export default function(props) {
     return (
         <div className="Tile">
             {isExternalUrl ? 
-                <a href={props.url} target="_blank">{renderChildren(props)}</a> :
-                <Link to={props.url}>{renderChildren(props)}</Link>}
+                <a href={props.url} target="_blank">{renderChildren(isExternalUrl, props)}</a>
+                : <Link to={props.url}>{renderChildren(isExternalUrl, props)}</Link>}
         </div>
     )
 }

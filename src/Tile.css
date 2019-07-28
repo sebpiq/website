@@ -1,7 +1,35 @@
 .Tile {
-    font-size: 170%;
     font-weight: bold;
     padding-top: 2em;
     padding-left: 2em;
     display: flex;
+    flex-direction: column;
+    color: #bbb;
+}
+
+.Tile a, .Tile a:visited {
+    color: #bbb;
+}
+
+.Tile__header {
+    text-transform: uppercase;
+    font-size: 250%;
+    position: relative; /*To allow positioning of external link*/
+}
+
+.Tile__body {
+    font-size: 160%;
+    border-bottom: 3px solid;
+}
+
+.Tile__date, .Tile__activityType {
+    display: inline-block;
+    font-size: 120%;
+}
+
+.Tile__external-link {
+    position: absolute;
+    left: -0.58em;
+    top: 0.3em;
+    width: 0.45em;
 }

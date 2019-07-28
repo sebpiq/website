@@ -10,9 +10,13 @@
     padding: 0 20%;
 }
 
+.Page__Link {
+    position: relative;
+}
+
 .Page__navigate_index {
     position: absolute;
     font-size: 180%;
-    top: 0.3em;
-    left: 17.5%;
+    left: -1em;
+    top: 1.3em;
 }
