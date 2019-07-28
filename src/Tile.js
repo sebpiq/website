@@ -6,11 +6,11 @@ function renderChildren(isExternalUrl, { header, date, activityType, preview }) 
     return (
         <Fragment>
             <div key="header" className="Tile__header">
+                <span>{header}</span>
                 {isExternalUrl ? 
                     <img className="Tile__external-link" src="/images/external-link.svg" alt="home" />
                     : null
                 }
-                <span>{header}</span>
             </div>
             <div key="preview" className="Tile__body">{preview}</div>
             <div key="footer" className="Tile__footer">

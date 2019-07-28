@@ -9,7 +9,7 @@
 }
 
 .BackgroundCanvas.background {
-    opacity: 0.45;
+    opacity: 0.35;
     pointer-events: none;
     /* we want this to still appear above tiles but below Page */
     z-index: 1;

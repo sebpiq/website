@@ -29,11 +29,12 @@ export default class BackgroundCanvas extends React.Component {
 
     componentDidMount() {
         this._refsUpdated()
+        this._propsUpdated()
         this.intervalHandle = setInterval(this._renderText, INTERVAL_TIME)
     }
 
     componentDidUpdate() {
-        this._refsUpdated()
+        this._propsUpdated()
     }
 
     componentWillUnmount() {
@@ -63,6 +64,9 @@ export default class BackgroundCanvas extends React.Component {
 
     _refsUpdated() {
         this.canvasCtx = this.canvasRef.current.getContext('2d')
+    }
+
+    _propsUpdated() {
         this.canvasCtx.fillStyle = TEXT_COLOR;
         const fontSize = Math.round(
             Math.max(this.props.width, this.props.height) * FONT_SCREEN_RATIO
@@ -89,20 +93,22 @@ export default class BackgroundCanvas extends React.Component {
             Math.round(this.props.height / 2),
         )
 
-        for (let i = 0; i < SCRAMBLE_ITER; i++) {
-            const pageX = Math.floor(Math.random() * this.props.width)
-            const pageY = Math.floor(Math.random() * this.props.height)
-            const squareW = SCRAMBLE_SQUARE_SIZE * this.props.width
-            const squareH = SCRAMBLE_SQUARE_SIZE * this.props.height
-            const x1 = pageX - squareW / 2
-            const y1 = pageY - squareH / 2
-            const x2 = x1 + (Math.random() * 2 - 1) * (this.props.width * SCRAMBLE_RANGE)
-            const y2 = y1 + (Math.random() * 2 - 1) * (this.props.height * SCRAMBLE_RANGE)
-            const imageData1 = this.canvasCtx.getImageData(x1, y1, squareW, squareH)
-            const imageData2 = this.canvasCtx.getImageData(x2, y2, squareW, squareH)
-            this.canvasCtx.putImageData(imageData1, x2, y2)
-            this.canvasCtx.putImageData(imageData2, x1, y1)
-        }
+        setTimeout(() => {
+            for (let i = 0; i < SCRAMBLE_ITER; i++) {
+                const pageX = Math.floor(Math.random() * this.props.width)
+                const pageY = Math.floor(Math.random() * this.props.height)
+                const squareW = SCRAMBLE_SQUARE_SIZE * this.props.width
+                const squareH = SCRAMBLE_SQUARE_SIZE * this.props.height
+                const x1 = pageX - squareW / 2
+                const y1 = pageY - squareH / 2
+                const x2 = x1 + (Math.random() * 2 - 1) * (this.props.width * SCRAMBLE_RANGE)
+                const y2 = y1 + (Math.random() * 2 - 1) * (this.props.height * SCRAMBLE_RANGE)
+                const imageData1 = this.canvasCtx.getImageData(x1, y1, squareW, squareH)
+                const imageData2 = this.canvasCtx.getImageData(x2, y2, squareW, squareH)
+                this.canvasCtx.putImageData(imageData1, x2, y2)
+                this.canvasCtx.putImageData(imageData2, x1, y1)
+            }
+        }, INTERVAL_TIME / 2)
     }
 
 }
