@@ -1,0 +1,15 @@
+.Brag ul {
+    list-style: disclosure-open;
+}
+
+.Brag li {
+    margin-bottom: 0.5em;
+}
+
+.Brag__date {
+    margin-right: 0.5em;
+}
+
+.Brag__name {
+    margin-right: 0.5em;
+}

@@ -1,11 +1,12 @@
 import React from 'react'
 import Page from '../Page'
+import PageTitle from '../PageTitle'
 import VideoVimeo from '../VideoVimeo'
 
 export default function() {
     return (
         <Page>
-            <h1>Possessed Rooms</h1>
+            <PageTitle text="Possessed Rooms" />
             <p><strong>Possessed rooms</strong> is a series of parasitic performances happening in public computer rooms. The project is a collaboration with <a href="http://fernandovisockis.net/">Fernando Visockis</a>.</p>
             <VideoVimeo videoId="165747866" />
             <p><strong>possessed room #1</strong> Media Lab Helsinki, computer room 515.</p>

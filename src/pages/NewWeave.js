@@ -1,11 +1,12 @@
 import React from 'react'
 import Page from '../Page'
+import PageTitle from '../PageTitle'
 import VideoVimeo from '../VideoVimeo'
 
 export default function() {
     return (
         <Page>
-            <h1>New Weave</h1>
+            <PageTitle text="New Weave" />
             <VideoVimeo videoId="120474851" />
             <p><strong>New Weave</strong> is an experimental sound performance where the performers improvise with small audio snippets recorded and sent live by audience members with their smartphones.</p>
 

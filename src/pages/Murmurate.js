@@ -1,5 +1,6 @@
 import React from 'react'
 import Page from '../Page'
+import PageTitle from '../PageTitle'
 import VimeoVideo from '../VideoVimeo';
 import YouTubeVideo from '../YouTubeVideo';
 import CenteredImage from '../CenteredImage'
@@ -7,7 +8,7 @@ import CenteredImage from '../CenteredImage'
 export default function() {
     return (
         <Page>
-            <h1>Murmurate</h1>
+            <PageTitle text="Murmurate" />
             <VimeoVideo videoId="144312243" />
             <p><strong>Murmurate</strong> (previously called Fields) is a networked system exploring new areas of musical performance and audience participation through the use of mobile technology as a medium for sound diffusion. This project is realized in collaboration with artist <a href="http://tim-shaw.net">Tim Shaw</a>.</p>
             <CenteredImage src="/images/projects/fields-6.jpg" /> 

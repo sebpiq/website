@@ -1,12 +1,13 @@
 import React from 'react'
 import Page from '../Page'
+import PageTitle from '../PageTitle'
 import VideoVimeo from '../VideoVimeo'
 import CenteredImage from '../CenteredImage';
 
 export default function() {
     return (
         <Page>
-            <h1>Pure Data And Raspberry Pi Workshops</h1>
+            <PageTitle text="Pure Data And Raspberry Pi Workshops" />
             <p>Teaching how to program and design a pocket-sized instrument with Pure Data and Raspberry Pi.</p>
             <CenteredImage src="/images/projects/pd-rpi-workshop-3.jpg" />
             <VideoVimeo videoId="98737686" />

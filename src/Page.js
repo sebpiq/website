@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import './Page.css'
 
 class Page extends React.Component {
@@ -10,13 +9,9 @@ class Page extends React.Component {
     }
 
     render () {
+        const classes = 'Page ' + (this.props.className || '')
         return (
-            <div className="Page" ref={this.pageRef}>
-                <Link to='/' className="Page__navigate_index">
-                    <div>
-                        {'<'}
-                    </div>
-                </Link>
+            <div className={classes} ref={this.pageRef}>
                 {this.props.children}
                 <button className="Page__scroll_to_top" onClick={this._scrollToTop}>^</button>
             </div>

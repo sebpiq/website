@@ -1,12 +1,14 @@
 import React from 'react'
 import Page from '../Page'
+import PageTitle from '../PageTitle'
 import VideoVimeo from '../VideoVimeo'
 import CenteredImage from '../CenteredImage';
 
 export default function() {
     return (
         <Page>
-            <h1>Freedom Portal</h1>
+            <PageTitle text="Freedom Portal" />
+
             <p>​
                 The Freedom Portal project was developed in collaboration with <a href="https://tim-shaw.net/">Tim Shaw</a> as a platform to organize unauthorized shows in the public space. 
             It was first prototyped in a residency at <a href="https://www.stereolux.org/">Stereolux</a></p>

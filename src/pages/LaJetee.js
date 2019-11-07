@@ -1,11 +1,12 @@
 import React from 'react'
 import Page from '../Page'
+import PageTitle from '../PageTitle'
 import CenteredImage from '../CenteredImage'
 
 export default function() {
     return (
         <Page>
-            <h1>La Jetée (movie concert)</h1>
+            <PageTitle text="La Jetée (movie concert)" />
             <p>In the aftermath of World War III, survivors live underground in a post-apocalyptic Paris where scientists research time travel to rescue the present.</p>
             <p>With live narration by David McKechnie, Tim Shaw and Sébastien Piquemal re-score this acclaimed short film by Chris Marker in a performance that explores digital mobile technology and hyperlocal networks for surround sound diffusion.</p>
             <CenteredImage src="/images/projects/la-jetee-1.jpg" /> 

@@ -13,6 +13,7 @@ import NewWeave from './pages/NewWeave'
 import PureDataRpiWorkshops from './pages/PureDataRpiWorkshops'
 import WebPd from './pages/WebPd'
 import PossessedRooms from './pages/PossessedRooms'
+import Brag from './pages/Brag'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
 
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/pure-data-and-raspberry-pi-workshops/" component={PureDataRpiWorkshops} />
                     <Route path="/webpd/" component={WebPd} />
                     <Route path="/possessed-rooms/" component={PossessedRooms} />                
+                    <Route path="/brag/" component={Brag} />                
 
                     <Redirect from="/*" to="/" />
                     <Route component={Index} />
@@ -44,6 +46,13 @@ function App() {
 function Index() {
     return (
         <TileContainer>
+            <Tile 
+                header="Past and present activities" 
+                activityType="brag"
+                date="2014..." 
+                url="/brag"
+                preview="A list of concerts, talks, lectures, etc ..."
+            />
             <Tile 
                 header="racolage.xxx" 
                 activityType="project" 

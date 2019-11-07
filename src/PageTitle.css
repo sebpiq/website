@@ -1,0 +1,9 @@
+.PageTitle {
+    position: relative;
+}
+
+a.PageTitle__navigate_index {
+    position: absolute;
+    left: -0.8em;
+    text-decoration: none;
+}
