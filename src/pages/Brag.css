@@ -1,4 +1,5 @@
 .Brag ul {
+    list-style: square;
     list-style: disclosure-open;
 }
 
@@ -12,4 +13,13 @@
 
 .Brag__name {
     margin-right: 0.5em;
+}
+
+.Brag__sublist {
+    margin-left: 1em;
+}
+
+.Brag__sublist li {
+    font-size: 80%;
+    margin-bottom: 0;
 }

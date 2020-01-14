@@ -1,5 +1,6 @@
 .BackgroundCanvas {
     position: fixed;
+    pointer-events: all;
     /* we want this to appear above tiles and Page */
     z-index: 3;
     top: 0;

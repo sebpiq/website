@@ -2,16 +2,16 @@ import React from 'react'
 import './BackgroundCanvas.css'
 import { getRandomEmoji } from './utils'
 
-const INTERVAL_TIME = 90
+const INTERVAL_TIME = 150
 // e.g. 100/1000 -> 100px font for 1000px screen width (or height if height > width)
 const FONT_SCREEN_RATIO = 700 / 1000
 const TEXT_COLOR = 'white'
 // Whether to keep previous frame and draw on top of it or erase before each frame 
 const KEEP_PREVIOUS_FRAME = false
 // Size of the square picked for the effect
-const SCRAMBLE_SQUARE_SIZE = 0.22
+const SCRAMBLE_SQUARE_SIZE = 0.12
 // Range (as a ratio) of the area in which the square is picked
-const SCRAMBLE_RANGE = 0.03
+const SCRAMBLE_RANGE = 0.06
 // Number of scrambles per touch / move
 const SCRAMBLE_ITER = 7
 
@@ -58,8 +58,9 @@ export default class BackgroundCanvas extends React.Component {
         )
     }
 
-    _backgroundOnfirstClick = (event) => {
-        this.setState({ background: true })
+    _backgroundOnfirstClick = () => {
+        // Timeout here to prevent the first click from going through to tiles and opening a new page
+        setTimeout(() => this.setState({ background: true }), 100)
     }
 
     _refsUpdated() {
@@ -68,10 +69,12 @@ export default class BackgroundCanvas extends React.Component {
 
     _propsUpdated() {
         this.canvasCtx.fillStyle = TEXT_COLOR;
-        const fontSize = Math.round(
-            Math.max(this.props.width, this.props.height) * FONT_SCREEN_RATIO
-        )
-        this.canvasCtx.font = `${fontSize}px monospace`
+        // Bug with chrome on big emojis : https://stackoverflow.com/questions/57245470/html5-canvas-image-data-empty-after-drawing-an-emoji-with-large-font-size-on-c
+        // const fontSize = Math.round(
+        //     Math.max(this.props.width, this.props.height) * FONT_SCREEN_RATIO
+        // )
+        // this.canvasCtx.font = `${fontSize}px monospace`
+        this.canvasCtx.font = `256px monospace`
         this.canvasCtx.textAlign = 'center'
         this.canvasCtx.textBaseline = 'middle'
         // this.canvasCtx.globalCompositeOperation = 'difference'
