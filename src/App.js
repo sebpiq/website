@@ -51,7 +51,7 @@ function Index() {
                 activityType="brag"
                 date="2014..." 
                 url="/brag"
-                preview="A list of concerts, talks, lectures, etc ..."
+                preview="A list of jobs, concerts, lectures, etc ..."
             />
             <Tile 
                 header="racolage.xxx" 

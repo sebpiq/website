@@ -5,14 +5,17 @@
 
 .Brag li {
     margin-bottom: 0.5em;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .Brag__date {
     margin-right: 0.5em;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .Brag__name {
     margin-right: 0.5em;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .Brag__sublist {

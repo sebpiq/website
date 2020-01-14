@@ -11,7 +11,7 @@ const KEEP_PREVIOUS_FRAME = false
 // Size of the square picked for the effect
 const SCRAMBLE_SQUARE_SIZE = 0.12
 // Range (as a ratio) of the area in which the square is picked
-const SCRAMBLE_RANGE = 0.06
+const SCRAMBLE_RANGE = 0.09
 // Number of scrambles per touch / move
 const SCRAMBLE_ITER = 7
 
