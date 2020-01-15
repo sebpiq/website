@@ -34,3 +34,5 @@ export const getRandomEmoji = () => {
         + Math.floor(Math.random() * 16)
     return String.fromCodePoint(codePoint)
 }
+
+export const isExternalUrl = (url) => url.startsWith('https://') || url.startsWith('http://')

@@ -51,8 +51,9 @@ function Index() {
                 activityType="brag"
                 date="2014..." 
                 url="/brag"
-                preview="A list of jobs, concerts, lectures, etc ..."
+                preview="A list of jobs, concerts, lectures."
             />
+            <TileContact />
             <Tile 
                 header="racolage.xxx" 
                 activityType="project" 
@@ -61,25 +62,11 @@ function Index() {
                 preview="A record label that releases experimental music through spam email, porn streaming sites, tinder, and other spammy release channels..."
             />
             <Tile 
-                header="Kialo" 
-                activityType="job" 
-                date="2018..." 
-                url="https://kialo.com"
-                preview={"Full-stack web developer at Kialo, a debate platform with the mission of \"making the world more thoughtful.\""}
-            />
-            <Tile 
                 header="Freedom Portal" 
                 activityType="project" 
                 date="2016-2017" 
                 url="/freedom-portal"
                 preview="A platform to organize unauthorized shows in the public space, hosted on Wi-Fi networks."
-            />
-            <Tile 
-                header="Volkswagen Future Center" 
-                activityType="job" 
-                date="2018" 
-                url="https://www.volkswagenag.com/en/news/stories/2018/05/never-forget-the-users.html"
-                preview="Creative Technologist at one of Volkswagen innovation centers. Working on the future of autonomous vehicles and urban mobility."
             />
             <Tile 
                 header="La Jetée (movie-concert)" 
@@ -129,7 +116,6 @@ function Index() {
                 date="2012"
                 url="https://sebpiq.github.io/funktion.fm"
             />
-            <TileContact />
         </TileContainer>
     )
 }

@@ -4,6 +4,7 @@ import rawProjects from 'portfolio-and-cv/projects.json'
 import rawTeachings from 'portfolio-and-cv/teaching.json'
 import rawWork from 'portfolio-and-cv/work.json'
 import Page from '../Page'
+import Link from '../Link'
 import PageTitle from '../PageTitle'
 import './Brag.css'
 
@@ -46,9 +47,9 @@ export default function() {
     const concertsElems = projectsEvents.map((event, i) => (
         <li key={i}>
             <span className="Brag__date">{event.date}</span>
-            <a href={event.projectUrl} target="_blank" rel="noopener noreferrer">
+            <Link href={event.projectUrl}>
                 <span className="Brag__name">{event.projectName}</span>
-            </a>
+            </Link>
             <span className="Brag__venue">{event.venue}</span>
         </li>
     ))
@@ -62,9 +63,9 @@ export default function() {
         ))
         return (
             <li key={teaching.name}>
-                <a href={teaching.url} target="_blank" rel="noopener noreferrer">
+                <Link href={teaching.url}>
                     <span className="Brag__name">{teaching.name}</span>
-                </a>
+                </Link>
                 <ul className="Brag__sublist">{eventsElems}</ul>
             </li>
         )

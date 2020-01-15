@@ -10,6 +10,7 @@ export default function VimeoVideo({ videoId }) {
                 position: 'relative',
             }}>
                 <iframe 
+                    title={`vimeo ${videoId}`}
                     src={src} 
                     style={{
                         position: 'absolute',
