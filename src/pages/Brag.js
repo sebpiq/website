@@ -30,6 +30,16 @@ rawProjects.forEach((project) => {
 })
 projectsEvents = sortBy(projectsEvents, (event) => -event.timestamp)
 
+rawProjects.forEach((project) => {
+    const projectTeachings = project.events.filter((event) => ['workshop'].includes(event.type))
+    if (projectTeachings.length) {
+        rawTeachings.push({
+            ...project,
+            name: `${project.name} Workshop`,
+            events: projectTeachings
+        })
+    }
+})
 const teachings = rawTeachings.map((teaching, i) => ({
     ...teaching,
     events: sortBy(
