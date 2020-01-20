@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    --bgBlack: #181818;
 }
 
 body, html, .App, #root {
@@ -7,7 +8,9 @@ body, html, .App, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+    /* fallback */
     background-color: black;
+    background-color: var(--bgBlack);
     color: white;
     font-family: 'Cutive Mono', monospace;
     font-size: 18px;

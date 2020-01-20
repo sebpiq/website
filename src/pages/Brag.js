@@ -100,14 +100,14 @@ export default function() {
         <Page className="Brag">
             <PageTitle text="Present and past activities" />
 
+            <h2>Permanent Positions</h2>
+            <ul>{workElems}</ul>
+            
             <h2>Concerts, Exhibitions</h2>
             <ul>{concertsElems}</ul>
 
             <h2>Teaching</h2>
             <ul>{teachingElems}</ul>
-
-            <h2>Permanent Positions</h2>
-            <ul>{workElems}</ul>
 
         </Page>
     )

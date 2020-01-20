@@ -5,7 +5,8 @@
 }
 
 .Brag li, .Brag__date, .Brag__name {
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--bgBlack);
+    opacity: 0.9;
 }
 
 .Brag__sublist li {
