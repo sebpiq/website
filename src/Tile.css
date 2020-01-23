@@ -19,8 +19,10 @@
 }
 
 .Tile__body {
-    font-size: 160%;
+    font-size: 140%;
     border-bottom: 3px solid;
+    text-transform: uppercase;
+    color: #ababab;
 }
 
 .Tile__date, .Tile__activityType {

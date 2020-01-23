@@ -48,8 +48,6 @@ function Index() {
         <TileContainer>
             <Tile 
                 header="Past and present activities" 
-                activityType="brag"
-                date="2014..." 
                 url="/brag"
                 preview="A list of jobs, concerts, lectures."
             />

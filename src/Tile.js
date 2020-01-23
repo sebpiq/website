@@ -14,9 +14,12 @@ function renderChildren({ url, header, date, activityType, preview }) {
                 }
             </div>
             <div key="preview" className="Tile__body">{preview}</div>
-            <div key="footer" className="Tile__footer">
-                <div key="date" className="Tile__date">{date}</div> | <div key="activityType" className="Tile__activityType">{activityType}</div>
-            </div>
+            {date && activityType ?
+                <div key="footer" className="Tile__footer">
+                    <div key="date" className="Tile__date">{date}</div> | <div key="activityType" className="Tile__activityType">{activityType}</div>
+                </div>
+                : null
+            }
         </Fragment>
     )
 }
