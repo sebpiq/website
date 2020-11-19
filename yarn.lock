@@ -2885,8 +2885,8 @@ domutils@^1.5.1, domutils@^1.7.0:
     domelementtype "1"
 
 dot-prop@^4.1.1:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.2.1.tgz#45884194a71fc2cda71cbb4bceb3a4dd2f433ba4"
   dependencies:
     is-obj "^1.0.0"
 
@@ -5129,6 +5129,10 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+
 lodash.unescape@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
@@ -6703,7 +6707,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -6993,6 +6997,13 @@ react-scripts@3.0.1:
     workbox-webpack-plugin "4.2.0"
   optionalDependencies:
     fsevents "2.0.6"
+
+react-sizes@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-sizes/-/react-sizes-2.0.0.tgz#c2100daf3bf74077fb410f09204340c1af5c1d4f"
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.0"
 
 react@^16.8.6:
   version "16.8.6"
