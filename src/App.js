@@ -14,9 +14,10 @@ import PureDataRpiWorkshops from './pages/PureDataRpiWorkshops'
 import WebPd from './pages/WebPd'
 import PossessedRooms from './pages/PossessedRooms'
 import Brag from './pages/Brag'
+import RacolageXxx from './pages/RacolageXxx'
+import Hyperexistence from './pages/Hyperexistence'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
-import RacolageXxx from './pages/RacolageXxx'
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/" exact component={Index} />
                     <Route path="/freedom-portal/" component={FreedomPortal} />
                     <Route path="/racolagexxx/" component={RacolageXxx} />
+                    <Route path="/hyperexistence/" component={Hyperexistence} />
                     <Route path="/la-jetee/" component={LaJetee} />
                     <Route path="/murmurate/" component={Murmurate} />
                     <Route path="/new-weave/" component={NewWeave} />
@@ -54,6 +56,13 @@ function Index() {
                 preview="A list of jobs, concerts, lectures."
             />
             <TileContact />
+            <Tile 
+                header="hyperexistence" 
+                activityType="project"
+                date="2020-..." 
+                url="/hyperexistence"
+                preview="(Work In Progress). A web essay on individualism in late capitalist society."
+            />
             <Tile 
                 header="racolage.xxx" 
                 activityType="project" 
