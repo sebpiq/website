@@ -9,20 +9,7 @@ export default function() {
             <PageTitle text="racolage.xxx" />
 
             <p>
-                <a href="http://racolage.xxx">racolage.xxx</a> is a record label that releases experimental music through spam email, 
-                porn streaming sites, tinder, and other spammy release channels...
-            </p>
-
-            <p>
-                racolage.xxx represents the culture of blatant self-promotion prevalent in music and the arts. 
-                It is (barely) the parody of a small cultural organization that desperately fights online, in an increasingly tense attention economy, 
-                where visibility is getting scarcer. Anything goes to steal a small audience share.
-            </p>
-
-            <p>
-                racolage.xxx tries to formulate a critique of the emerging network society and its modalities : 
-                constant self-expression, attention seeking, manipulation of affect and intense competition 
-                of everyone against everyone else. 
+                <a href="http://racolage.xxx">racolage.xxx</a> is a record label that releases experimental music through spam.
             </p>
 
             <p>
@@ -30,6 +17,18 @@ export default function() {
                 racolage.xxx has so far released 26 singles and produced 4 live shows. 
                 It has diffused music using different spamming techniques such as email, 
                 tinder, porn streaming, Chaturbate, YouTube phishing, gig economy platforms, academia.edu and porn ad networks.
+            </p>
+
+            <p>
+                racolage.xxx represents the culture of blatant self-promotion prevalent in music and the arts. 
+                It is the parody (except it is real) of a small cultural organization that desperately fights online, in an increasingly tense attention economy, 
+                where visibility is getting scarcer. Anything goes to steal a small audience share.
+            </p>
+
+            <p>
+                racolage.xxx tries to formulate a critique of the emerging network society and its modalities : 
+                constant self-expression, attention seeking, manipulation of affect and intense competition 
+                of everyone against everyone else. 
             </p>
 
             <h2>Press</h2>
