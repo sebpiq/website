@@ -22,13 +22,11 @@ export default function() {
             <p>
                 racolage.xxx represents the culture of blatant self-promotion prevalent in music and the arts. 
                 It is the parody (except it is real) of a small cultural organization that desperately fights online, in an increasingly tense attention economy, 
-                where visibility is getting scarcer. Anything goes to steal a small audience share.
+                where visibility is getting scarcer.
             </p>
 
             <p>
-                racolage.xxx tries to formulate a critique of the emerging network society and its modalities : 
-                constant self-expression, attention seeking, manipulation of affect and intense competition 
-                of everyone against everyone else. 
+                Anything goes to steal a small audience share.
             </p>
 
             <h2>Press</h2>
