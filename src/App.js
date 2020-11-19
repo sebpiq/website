@@ -16,6 +16,7 @@ import PossessedRooms from './pages/PossessedRooms'
 import Brag from './pages/Brag'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
+import RacolageXxx from './pages/RacolageXxx'
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Switch>
                     <Route path="/" exact component={Index} />
                     <Route path="/freedom-portal/" component={FreedomPortal} />
+                    <Route path="/racolagexxx/" component={RacolageXxx} />
                     <Route path="/la-jetee/" component={LaJetee} />
                     <Route path="/murmurate/" component={Murmurate} />
                     <Route path="/new-weave/" component={NewWeave} />
@@ -55,8 +57,8 @@ function Index() {
             <Tile 
                 header="racolage.xxx" 
                 activityType="project" 
-                date="2017..." 
-                url="http://racolage.xxx"
+                date="2017-2020" 
+                url="/racolagexxx"
                 preview="A record label that releases experimental music through spam email, porn streaming sites, tinder, and other spammy release channels..."
             />
             <Tile 
