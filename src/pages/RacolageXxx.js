@@ -32,7 +32,7 @@ export default function() {
                 tinder, porn streaming, Chaturbate, YouTube phishing, gig economy platforms, academia.edu and porn ad networks.
             </p>
 
-            <h2>Press coverage</h2>
+            <h2>Press</h2>
             <ul>
                 <li>
                     <a href="https://www.letagparfait.com/fr/2018/06/19/porno-noise-et-branlr-room-racolage-xxx-le-label-qui-vous-spam/">
