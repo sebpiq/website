@@ -4,6 +4,12 @@
 
 a.PageTitle__navigate_index {
     position: absolute;
-    left: -0.8em;
+    left: -1em;
     text-decoration: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
 }

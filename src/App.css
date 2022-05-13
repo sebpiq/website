@@ -21,6 +21,10 @@ a, a:visited {
     text-decoration: none;
 }
 
+button {
+    font-family: 'Cutive Mono', monospace;
+}
+
 ul {
     padding-left: 0;
 }

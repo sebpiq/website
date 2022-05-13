@@ -125,7 +125,6 @@ After six months of asking his friends to write fake 5-star reviews and ghosting
 
 His experiment, a comment on the online reputation economy (stars, likes, follows, ...), proved that Trip Advisor was, in his words, a "false reality". It also illustrates more generally how competition for attention has created a perverse incentive for people to try and manipulate online platforms, therefore turning the Internet into a place where [a lot of things are fake](https://nymag.com/intelligencer/2018/12/how-much-of-the-internet-is-fake.html).  
 
-<!-- EMBED : [https://www.youtube.com/embed/bqPARIKHbN8](https://www.youtube.com/embed/bqPARIKHbN8) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bqPARIKHbN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -148,7 +147,6 @@ It is hard to tell a single, concise story of Anonymous, since it is so complex,
 
 In 2010, Anonymous launched "Operation Payback", a series of cyberattacks on various copyrights and [financial organizations](https://www.theguardian.com/world/2010/dec/08/wikileaks-visa-mastercard-operation-payback). They managed to take down several important websites, including Visa, Mastercard and PayPal which subsequently [claimed 3.5 million pounds in damages](https://www.bbc.com/news/uk-20449474).
 
-<!-- EMBED : [https://www.youtube.com/embed/bl2_-NYm6yA](https://www.youtube.com/embed/bl2_-NYm6yA) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bl2_-NYm6yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -158,13 +156,10 @@ The obsessive K-Pop fans (also called "K-Pop Stans") is another online community
 
 In 2020, in the midst of the Black Lives Matter (BLM) protests in the US, the K-Pop stans suddenly appeared in the limelight on western media. It started with the Stan's effort to invisibilize racist tweets and discussions, through the [flooding of anti-BLM hashtags](https://twitter.com/search?q=(%23WhiteLivesMatter)%20until%3A2020-06-04%20since%3A2020-06-03%20-filter%3Areplies&src=typed_query&f=live) on Twitter. It continued with [crashing the Dallas police app](https://twitter.com/DallasPD/status/1267236088755695618) by spamming it with fancams (close-up videos of their idols). Finally, it culminated in [crashing the party at Trump's first post-covid campaign rally](https://www.nytimes.com/2020/06/21/style/tiktok-trump-rally-tulsa.html). The K-Pop stans had organised a "no-show" protest, by discreetly booking as many free tickets as they could, and then simply not coming to the meeting, leaving many of the seats empty.
 
-<!-- EMBED : [https://twitter.com/Iuv4enha/status/1268329931236347905](https://twitter.com/Iuv4enha/status/1268329931236347905) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">hope y’all burn in hell :)) <a href="https://twitter.com/hashtag/BlueLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#BlueLivesMatter</a> <a href="https://twitter.com/hashtag/WhiteLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#WhiteLivesMatter</a> <a href="https://t.co/J92Gy5P2gO">pic.twitter.com/J92Gy5P2gO</a></p>&mdash; jun ☕️ SUNOO MONTH (@Iuv4enha) <a href="https://twitter.com/Iuv4enha/status/1268329931236347905?ref_src=twsrc%5Etfw">June 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- EMBED : [https://twitter.com/dreamy_pjm/status/1268330081577054208](https://twitter.com/dreamy_pjm/status/1268330081577054208) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Instead of being a racist asshole you should Stan BLACKPINK <a href="https://twitter.com/hashtag/WhiteLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#WhiteLivesMatter</a> <a href="https://t.co/JE3Bz60RO9">pic.twitter.com/JE3Bz60RO9</a></p>&mdash; Samantha ⁷ (@dreamy_pjm) <a href="https://twitter.com/dreamy_pjm/status/1268330081577054208?ref_src=twsrc%5Etfw">June 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- EMBED : [https://twitter.com/DallasPD/status/1267236088755695618](https://twitter.com/DallasPD/status/1267236088755695618) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Due to technical difficulties iWatch Dallas app will be down temporarily. <a href="https://t.co/zksA1hkVhV">pic.twitter.com/zksA1hkVhV</a></p>&mdash; Dallas Police Dept (@DallasPD) <a href="https://twitter.com/DallasPD/status/1267236088755695618?ref_src=twsrc%5Etfw">May 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
@@ -176,13 +171,10 @@ WSB is a community that has existed since 2012, has now more than 10 million mem
 
 WSB came out of the trolling culture of Anonymous, as well as a desire of small traders to stick it to big finance. Of course, just like in other large online communities, members are a varied bunch. Here again, misogynistic jokes abound, and people's motivations for taking part vary greatly. While [some are seeking justice](https://new.reddit.com/r/wallstreetbets/comments/l6omry/an_open_letter_to_melvin_capital_cnbc_boomers_and/) against Wall Street, others are clearly in it just for financial gains.
 
-EMBED : [https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck](https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck)
-<!-- <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="524"></iframe> -->
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="524"></iframe>
 
-EMBED : [https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now](https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now)
-<!-- <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="419"></iframe> -->
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="419"></iframe>
 
-<!-- EMBED : [https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all](https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all) -->
 <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="490"></iframe>
 
 As subversive as WallStreetBets may seem, the world of finance immediately saw an opportunity to make money. A Wall Street fund started considering [hiring reddit users to help them cash in](https://www.gizmodo.com.au/2021/02/wall-street-fund-wants-to-hire-r-wallstreetbets-users-to-help-pick-meme-stocks/), while the official NASDAQ website started posting [trading tips](https://www.nasdaq.com/articles/meme-stocks-list%3A-the-top-10-reddit-stocks-seeing-chatter-in-the-june-2021-rally-2021-06) on what is now being called "meme stocks".

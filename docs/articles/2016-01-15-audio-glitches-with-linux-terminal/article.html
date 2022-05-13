@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>article</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        background-color: #2a211c;
+        color: #bdae9d;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+    div.sourceCode
+      { color: #bdae9d; background-color: #2a211c; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ffff00; } /* Alert */
+    code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bn { color: #44aa43; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #049b0a; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+    code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+    code span.dt { text-decoration: underline; } /* DataType */
+    code span.dv { color: #44aa43; } /* DecVal */
+    code span.er { color: #ffff00; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #44aa43; } /* Float */
+    code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.pp { font-weight: bold; } /* Preprocessor */
+    code span.sc { color: #049b0a; } /* SpecialChar */
+    code span.ss { color: #049b0a; } /* SpecialString */
+    code span.st { color: #049b0a; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #049b0a; } /* VerbatimString */
+    code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Here is an old hack with a terminal to listen to the guts of your computer.</p>
+<p>Before starting, here are a couple of tracks by <a href="https://bitsnibblesbytes.wordpress.com/">Stephen Stamper</a>, which were partly produced with this technique :</p>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34843548&amp;color=0066cc&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
+</iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/90038560&amp;color=0066cc&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false">
+</iframe>
+<p><code>aplay</code> is a great tool available on most linux distributions which allows you to read raw data, and interpret it as audio. You just give it the data source, tell it how to interpret it (sample rate, sample format, number of channels) and it will play it back.</p>
+<p><strong>note1</strong> : on OSX you can achieve the same results with <a href="http://sox.sourceforge.net/">sox</a>.</p>
+<p><strong>note2</strong> : be careful with the volume of your speakers or headphones. All these audio examples are quite loud.</p>
+<p>Let’s start by sending <code>aplay</code> an mp3 file to see how it sounds :</p>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf1.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/1.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/1.mp3" type="audio/mp3"> </audio></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">cat</span> ~/Music/Cameosis/03-Cameo-PleaseYou.mp3 <span class="kw">|</span> <span class="fu">aplay</span> -r 8000 -c2</span></code></pre></div>
+<p>Here you can see the basic technique. <code>cat</code> will just read a file, and send it to its output, then you use the pipe character <strong>|</strong> to send that output to <code>aplay</code> which will interepret the bytes as audio and play that audio back. <code>-r 8000</code> means that we interpret the sound with sample rate of <em>8000hz</em>, <code>-c2</code> means stereo.</p>
+<p>I don’t have a mac to test, but according to Stephen, on OSX the equivalent command would be :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">cat</span> ~/Music/Cameosis/03-Cameo-PleaseYou.mp3 <span class="kw">|</span> <span class="fu">sox</span> -q -t raw -r 8000 -b 8 -e unsigned-integer - -t coreaudio vol 0.5</span></code></pre></div>
+<p>With this particular file, as with most files, the result is not very exciting … mostly white noise. This is because the raw data in a mp3 file is not periodical. There is however a lot of files in your computer that have a repetitive structure, and can make very interesting sounds. For example :</p>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf2.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/2.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/2.mp3" type="audio/mp3"> </audio></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> cat /var/log/mongodb/mongodb.log <span class="kw">|</span> <span class="fu">aplay</span> -c2 -f MU_LAW</span></code></pre></div>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf3.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/3.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/3.mp3" type="audio/mp3"> </audio></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sudo</span> cat /var/log/mongodb/mongodb.log <span class="kw">|</span> <span class="fu">aplay</span> -c2 -r 4000 -f MU_LAW</span></code></pre></div>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf4.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/4.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/4.mp3" type="audio/mp3"> </audio></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">sudo</span> cat /var/lib/mongodb/overwhelmed.0 <span class="kw">|</span> <span class="fu">aplay</span> -c2 -f MU_LAW</span></code></pre></div>
+<p><code>-f MU_LAW</code> here specifies the format of the sound. There is several different formats you can use, and choosing a different format will have a big impact on the sound. Available formats are listed in <code>aplay</code> documentation (which you can read by typing <code>man aplay</code>).</p>
+<p>Above I used a database as input, and log files. These all have a periodical structure, and you can hear it reflected in the sounds generated.</p>
+<p>You can also use live data as input to <code>aplay</code>. For example devices from your system :</p>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf5.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/5.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/5.mp3" type="audio/mp3"> </audio></p>
+<pre><code>sudo cat /dev/vga_arbiter | aplay -r 2000 -c2 -f MU_LAW</code></pre>
+<p>The result here is quite boring as the data is not changing. However we can get more interesting sounds with data from <code>tcpdump</code> - which captures the traffic from your network connection :</p>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf6.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/6.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/6.mp3" type="audio/mp3"> </audio></p>
+<pre><code>sudo tcpdump -vvv -i wlan0 | aplay -c2 -r 2000 -f FLOAT_LE</code></pre>
+<p>And finally - one that I quite like - you can listen to your webcam by using a software called <code>ffmpeg</code> to capture input from the cam and piping it to <code>aplay</code> as we did before. The sonic results are surprising deep and complex, though the sound doesn’t really change :</p>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf7.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/7.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/7.mp3" type="audio/mp3"> </audio></p>
+<pre><code>ffmpeg -f v4l2 -i /dev/video0 -vf scale=100:100 -f rawvideo pipe: | aplay -r 2000 -c2</code></pre>
+<p><img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf8.svg" width="100%" height="auto" /><audio controls="" style="width:100%;"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/8.ogg" type="audio/ogg"> <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/8.mp3" type="audio/mp3"> </audio></p>
+<pre><code>ffmpeg -f v4l2 -i /dev/video0 -vf scale=6000:6000 -f rawvideo pipe: | aplay -r 2000 -c2</code></pre>
+<p>So yes … you can try to pipe <strong>|</strong> pretty much anything to your <code>aplay</code> … hours of procrastination lie ahead.</p>
+<p>And if nothing of these work for you, you can always run this command in your terminal to get some colorfull glitches :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">echo</span> -e <span class="st">&quot;#coding=utf8\nimport sys,random as r;c=0;p=&#39; &#39;*6\nwhile 1:p,c=(&#39; &#39;*r.randint(3,200),r.randint(20,99)) if r.random()&gt;0.999 else (p,c);sys.stdout.write(&#39;\033[%sm&#39;%c+(&#39;▚&#39;*15 if r.random()&gt;0.995 else &#39;▚&#39;*16)+p)&quot;</span> <span class="kw">|</span> <span class="ex">python</span></span></code></pre></div>
+</body>
+</html>

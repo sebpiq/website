@@ -33,7 +33,7 @@ Small performances < 15 connections
 
 For very small performances, you don't really need any fancy network equipment :
 
-<img src="https://raw.githubusercontent.com/sebpiq/rhizome/master/images/network-diagram1.png" style="max-width:100%;width:25em;"/>
+<img src="https://raw.githubusercontent.com/sebpiq/rhizome/master/images/network-diagram1.png" style="max-width:100%;width:25em;background-color:white;"/>
 
 - **WIFI router** : can be any home WIFI router. Typically, those cost between 15 and 50 euros. personnally I have this cheap [TP-link router](http://www.tp-link.fi/products/details/cat-9_TL-WR841ND.html) which worked alright for performances with 10-12 connections (more than that it starts to choke a bit). I just happened to have this one at home for my own WIFI network, but any cheap home router will do.
 
@@ -54,7 +54,7 @@ A home WIFI router is typically a combination of a router, a switch and a WIFI a
 
 This is the setup I have been using : 
 
-<img src="https://raw.githubusercontent.com/sebpiq/rhizome/master/images/network-diagram2.png" style="max-width:100%;width:30em;"/>
+<img src="https://raw.githubusercontent.com/sebpiq/rhizome/master/images/network-diagram2.png" style="max-width:100%;width:30em;background-color:white;"/>
 
 - **Router** : this is a **wired** router. Its role is to attribute IP addresses to devices on the network and route messages from one device to another. The router is the reason for the 250 limit. On a single network, there is only 255 IP addresses available. Some are reserved, and you will need a couple more for the rhizome server, access points, ... which brings us down to 250, probably less in most cases.
 

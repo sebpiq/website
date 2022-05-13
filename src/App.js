@@ -14,6 +14,7 @@ import PureDataRpiWorkshops from './pages/PureDataRpiWorkshops'
 import WebPd from './pages/WebPd'
 import PossessedRooms from './pages/PossessedRooms'
 import Brag from './pages/Brag'
+import BlogPost from './pages/BlogPost'
 import RacolageXxx from './pages/RacolageXxx'
 import Hyperexistence from './pages/Hyperexistence'
 // !!! Must be imported last to override other css properties properly
@@ -39,6 +40,7 @@ function App() {
                     <Route path="/webpd/" component={WebPd} />
                     <Route path="/possessed-rooms/" component={PossessedRooms} />
                     <Route path="/brag/" component={Brag} />
+                    <Route path="/articles/:slug" component={BlogPost} />
                     <Route path="/articles/" component={Articles} />
 
                     <Redirect from="/*" to="/" />
@@ -57,12 +59,12 @@ function Index() {
                 url="/brag"
                 preview="A list of jobs, concerts, lectures."
             />
-            <TileContact />
             <Tile 
                 header="Articles and blog posts" 
                 url="/articles"
                 preview=""
             />
+            <TileContact />
             <Tile 
                 header="hyperexistence" 
                 activityType="project"

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>article</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        background-color: #2a211c;
+        color: #bdae9d;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+    div.sourceCode
+      { color: #bdae9d; background-color: #2a211c; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ffff00; } /* Alert */
+    code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bn { color: #44aa43; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #049b0a; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+    code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+    code span.dt { text-decoration: underline; } /* DataType */
+    code span.dv { color: #44aa43; } /* DecVal */
+    code span.er { color: #ffff00; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #44aa43; } /* Float */
+    code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.pp { font-weight: bold; } /* Preprocessor */
+    code span.sc { color: #049b0a; } /* SpecialChar */
+    code span.ss { color: #049b0a; } /* SpecialString */
+    code span.st { color: #049b0a; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #049b0a; } /* VerbatimString */
+    code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Just published an implementation of PaulStretch in JavaScript which I made about a year ago. The <a href="https://github.com/sebpiq/paulstretch.js">repository is here</a> and in addition there is a demo <a href="http://sebpiq.github.io/paulstretch.js/examples/stretched-and-droned/dist/index.html">which allows you to create nice drones from SoundCloud tracks</a>. The following post is a more general tutorial on how to process audio live with web workers, and it uses <strong>paulstretch.js</strong> as an example.</p>
+<!--more-->
+<p><strong>paulstretch.js</strong> can be used in Node.js and in the browser. Unlike the original PaulStretch implementations, it is designed for allowing the user to change the stretch ratio at any time.</p>
+<p>Let’s go over its API, in order to make the following example clearer.</p>
+<p>Note that in the following, <code>blockOut</code> and <code>blockIn</code> are just arrays representing channels data. For example a stereo block of 10 frames is represented by <code>[new Float32Array(10), new Float32Array(10)]</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">// Creates a PaulStretch instance. Typical `winSize` is 4096.</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">// The created instance has 2 queues. One &#39;write queue&#39; with raw input frames,</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">// one &#39;read queue&#39; with processed frames.</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">var</span> paulstretch <span class="op">=</span> <span class="kw">new</span> PaulStretch(numberOfChannels<span class="op">,</span> initialStretchRatio<span class="op">,</span> winSize)</span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">// Writes a block to the &#39;write queue&#39;.</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>paulstretch<span class="op">.</span><span class="fu">write</span>(blockIn)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">// Processes the data from the &#39;write queue&#39; and add it to the &#39;read queue&#39;.</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">// It also returns the number of frames that were processed.</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">// If there is not enough data to process, 0 is returned.</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>paulstretch<span class="op">.</span><span class="fu">process</span>() </span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">// Reads the processed data from the &#39;read queue&#39; to `blockOut`.</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">// The amount of frames read depends on the length of `blockOut`.</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">// If there is not enough frames to fill `blockOut`, `null` is returned.</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>paulstretch<span class="op">.</span><span class="fu">read</span>(blockOut)</span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co">// Returns the number of processed frames in the &#39;read queue&#39;.</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>paulstretch<span class="op">.</span><span class="fu">readQueueLength</span>()</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co">// Set the time stretch ratio. Note that frames in the `readQueue` won&#39;t be affected.</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>paulstretch<span class="op">.</span><span class="fu">setRatio</span>(newRatio)</span></code></pre></div>
+<h1 id="the-web-audio-api-code">The web audio API code</h1>
+<p>As all the processing will happen in a worker, the only thing we want from web audio API is to read incoming blocks of audio and send them for processing to our worker.</p>
+<p>So we create a <code>ScriptProcessorNode</code>, with an <code>onaudioprocess</code> method that :</p>
+<ol type="1">
+<li>reads incoming blocks of audio, writes them to a queue <code>blocksIn</code> which will be sent to the worker.</li>
+<li>plays back audio from another queue <code>blocksOut</code> which contains processed audio blocks received from the worker.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">var</span> blocksIn <span class="op">=</span> []</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="op">,</span> blocksOut <span class="op">=</span> []</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>paulstretchNode<span class="op">.</span><span class="at">onaudioprocess</span> <span class="op">=</span> <span class="kw">function</span>(<span class="bu">event</span>) {</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">var</span> ch<span class="op">,</span> block <span class="op">=</span> []</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="cf">for</span> (ch <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> ch <span class="op">&lt;</span> numberOfChannels<span class="op">;</span> ch<span class="op">++</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    block<span class="op">.</span><span class="fu">push</span>(<span class="bu">event</span><span class="op">.</span><span class="at">inputBuffer</span><span class="op">.</span><span class="fu">getChannelData</span>(ch))</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  blocksIn<span class="op">.</span><span class="fu">push</span>(block)</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  </span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="cf">if</span> (blocksOut<span class="op">.</span><span class="at">length</span>) {</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    block <span class="op">=</span> blocksOut<span class="op">.</span><span class="fu">shift</span>()</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    <span class="cf">for</span> (ch <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> ch <span class="op">&lt;</span> numberOfChannels<span class="op">;</span> ch<span class="op">++</span>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">outputBuffer</span><span class="op">.</span><span class="fu">getChannelData</span>(ch)<span class="op">.</span><span class="fu">set</span>(block[ch])</span>
+<span id="cb2-15"><a href="#cb2-15"></a>  }</span>
+<span id="cb2-16"><a href="#cb2-16"></a>}</span></code></pre></div>
+<h1 id="the-worker-file">The worker file</h1>
+<p>Here is a template of our worker file with a message handler for receiving commands from the main thread.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a>onmessage <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="cf">switch</span> ( <span class="bu">event</span><span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">type</span> ) {</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">case</span> <span class="st">&#39;read&#39;</span><span class="op">:</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>      <span class="cf">break</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="cf">case</span> <span class="st">&#39;write&#39;</span><span class="op">:</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>      <span class="cf">break</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  }</span>
+<span id="cb3-8"><a href="#cb3-8"></a>}</span></code></pre></div>
+<p>In order to keep the audio responsive, and be able to change the stretch ratio live, we need to process audio only at the last moment. This will be handled in the <code>'read'</code> case.</p>
+<p>Writing is trivial … we just take the audio as it comes :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a>  <span class="cf">case</span> <span class="st">&#39;write&#39;</span><span class="op">:</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>    paulStretch<span class="op">.</span><span class="fu">write</span>(<span class="bu">event</span><span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">data</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">break</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  }</span></code></pre></div>
+<p>Reading is more tricky. We need to make sure that we have enough processed audio to meet the demand. and not starve the <code>ScriptProcessorNode</code>, which would result in ugly glitches of agony. For this, we will simply buffer the processed audio, making sure that we always have a batch of <code>batchSize</code> blocks ready to be sent. Of course, the bigger the buffer (i.e. the bigger batch size), the less likely you are to get glitches. Unfortunately, the bigger the buffer, the bigger the latency between a change of stretch ratio and an audible result.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a>  <span class="cf">case</span> <span class="st">&#39;read&#39;</span><span class="op">:</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="kw">var</span> i</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="co">// If there is at least `batchSize` blocks of audio ready to be sent in the &#39;read queue&#39;,</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="co">// we send the whole batch block by block.</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="cf">if</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(paulStretch<span class="op">.</span><span class="fu">readQueueLength</span>() <span class="op">/</span> blockSize) <span class="op">&gt;=</span> batchSize) {</span>
+<span id="cb5-7"><a href="#cb5-7"></a>      <span class="cf">for</span> (i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> batchSize<span class="op">;</span> i<span class="op">++</span>) paulStretch<span class="op">.</span><span class="fu">read</span>(blocksOut[i])</span>
+<span id="cb5-8"><a href="#cb5-8"></a>      postMessage({ <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;read&#39;</span><span class="op">,</span> <span class="dt">data</span><span class="op">:</span> blocksOut })</span>
+<span id="cb5-9"><a href="#cb5-9"></a>    }</span>
+<span id="cb5-10"><a href="#cb5-10"></a> </span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="co">// Fill-up the &#39;read queue&#39; to at least `batchSize` blocks</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="cf">while</span> ((paulStretch<span class="op">.</span><span class="fu">readQueueLength</span>() <span class="op">&lt;</span> (batchSize <span class="op">*</span> blockSize)) </span>
+<span id="cb5-13"><a href="#cb5-13"></a>      <span class="op">&amp;&amp;</span> (paulStretch<span class="op">.</span><span class="fu">process</span>() <span class="op">!==</span> <span class="dv">0</span>)) paulStretch<span class="op">.</span><span class="fu">readQueueLength</span>()</span>
+<span id="cb5-14"><a href="#cb5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15"></a>    <span class="cf">break</span></span></code></pre></div>
+<p>Complete worker code can be found <a href="https://github.com/sebpiq/paulstretch.js/blob/master/examples/simple/js/paulstretch-worker.js">here</a>.</p>
+<h1 id="communication-with-the-worker">Communication with the worker</h1>
+<p>Now that all the parts are there, we will need to wire them up.</p>
+<p>For this we will run in the main thread a function with <code>setInterval</code> that will periodically communicate with the worker : sending raw audio, and receiving processed audio.</p>
+<p>Once again, for raw audio there is no problem, as we will send the blocks as they comes … but for processed audio we will apply a similar technique as in the worker and use a buffer that should always contain at least <code>batchSize</code> blocks. Therefore, we check the state of our buffer <code>blocksOut</code> at each interval, and request new data from the worker only when the buffer runs low.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1"></a><span class="pp">setInterval</span>(<span class="kw">function</span>() {</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="cf">if</span> (blocksIn<span class="op">.</span><span class="at">length</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    paulstretchWorker<span class="op">.</span><span class="fu">postMessage</span>({ <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;write&#39;</span><span class="op">,</span> <span class="dt">data</span><span class="op">:</span> blocksIn<span class="op">.</span><span class="fu">shift</span>() })</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="cf">if</span> (blocksOut<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> batchSize) </span>
+<span id="cb6-6"><a href="#cb6-6"></a>    paulstretchWorker<span class="op">.</span><span class="fu">postMessage</span>({ <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;read&#39;</span> })</span>
+<span id="cb6-7"><a href="#cb6-7"></a>}<span class="op">,</span> <span class="dv">100</span>)</span></code></pre></div>
+<p>That’s all there is to it! With this simple technique, you can use in web audio API processes that are too heavy to run in the main thread.</p>
+<p>Let’s recap :</p>
+<p><strong>In the main thread</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="kw">var</span> blocksIn <span class="op">=</span> []</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="op">,</span> blocksOut <span class="op">=</span> []</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>paulstretchNode<span class="op">.</span><span class="at">onaudioprocess</span> <span class="op">=</span> <span class="kw">function</span>(<span class="bu">event</span>) {</span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="kw">var</span> ch<span class="op">,</span> block <span class="op">=</span> []</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="cf">for</span> (ch <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> ch <span class="op">&lt;</span> numberOfChannels<span class="op">;</span> ch<span class="op">++</span>)</span>
+<span id="cb7-9"><a href="#cb7-9"></a>    block<span class="op">.</span><span class="fu">push</span>(<span class="bu">event</span><span class="op">.</span><span class="at">inputBuffer</span><span class="op">.</span><span class="fu">getChannelData</span>(ch))</span>
+<span id="cb7-10"><a href="#cb7-10"></a>  blocksIn<span class="op">.</span><span class="fu">push</span>(block)</span>
+<span id="cb7-11"><a href="#cb7-11"></a>  </span>
+<span id="cb7-12"><a href="#cb7-12"></a>  <span class="cf">if</span> (blocksOut<span class="op">.</span><span class="at">length</span>) {</span>
+<span id="cb7-13"><a href="#cb7-13"></a>    block <span class="op">=</span> blocksOut<span class="op">.</span><span class="fu">shift</span>()</span>
+<span id="cb7-14"><a href="#cb7-14"></a>    <span class="cf">for</span> (ch <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> ch <span class="op">&lt;</span> numberOfChannels<span class="op">;</span> ch<span class="op">++</span>)</span>
+<span id="cb7-15"><a href="#cb7-15"></a>      <span class="bu">event</span><span class="op">.</span><span class="at">outputBuffer</span><span class="op">.</span><span class="fu">getChannelData</span>(ch)<span class="op">.</span><span class="fu">set</span>(block[ch])</span>
+<span id="cb7-16"><a href="#cb7-16"></a>  }</span>
+<span id="cb7-17"><a href="#cb7-17"></a>}</span>
+<span id="cb7-18"><a href="#cb7-18"></a></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="pp">setInterval</span>(<span class="kw">function</span>() {</span>
+<span id="cb7-20"><a href="#cb7-20"></a>  <span class="cf">if</span> (blocksIn<span class="op">.</span><span class="at">length</span>)</span>
+<span id="cb7-21"><a href="#cb7-21"></a>    paulstretchWorker<span class="op">.</span><span class="fu">postMessage</span>({ <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;write&#39;</span><span class="op">,</span> <span class="dt">data</span><span class="op">:</span> blocksIn<span class="op">.</span><span class="fu">shift</span>() })</span>
+<span id="cb7-22"><a href="#cb7-22"></a></span>
+<span id="cb7-23"><a href="#cb7-23"></a>  <span class="cf">if</span> (blocksOut<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> batchSize) </span>
+<span id="cb7-24"><a href="#cb7-24"></a>    paulstretchWorker<span class="op">.</span><span class="fu">postMessage</span>({ <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;read&#39;</span> })</span>
+<span id="cb7-25"><a href="#cb7-25"></a>}<span class="op">,</span> <span class="dv">100</span>)</span></code></pre></div>
+<p><strong>In the web worker</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1"></a>onmessage <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="cf">switch</span> ( <span class="bu">event</span><span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">type</span> ) {</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="cf">case</span> <span class="st">&#39;read&#39;</span><span class="op">:</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>      <span class="kw">var</span> i</span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>      <span class="co">// Send audio from the buffer if there is at least `batchSize` blocks</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>      <span class="cf">if</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(paulStretch<span class="op">.</span><span class="fu">readQueueLength</span>() <span class="op">/</span> blockSize) <span class="op">&gt;=</span> batchSize) {</span>
+<span id="cb8-8"><a href="#cb8-8"></a>        <span class="cf">for</span> (i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> batchSize<span class="op">;</span> i<span class="op">++</span>) paulStretch<span class="op">.</span><span class="fu">read</span>(blocksOut[i])</span>
+<span id="cb8-9"><a href="#cb8-9"></a>        postMessage({ <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;read&#39;</span><span class="op">,</span> <span class="dt">data</span><span class="op">:</span> blocksOut })</span>
+<span id="cb8-10"><a href="#cb8-10"></a>      }</span>
+<span id="cb8-11"><a href="#cb8-11"></a>   </span>
+<span id="cb8-12"><a href="#cb8-12"></a>      <span class="co">// Fill-up the buffers to at least `batchSize` blocks</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>      <span class="cf">while</span> ((paulStretch<span class="op">.</span><span class="fu">readQueueLength</span>() <span class="op">&lt;</span> (batchSize <span class="op">*</span> blockSize)) </span>
+<span id="cb8-14"><a href="#cb8-14"></a>        <span class="op">&amp;&amp;</span> (paulStretch<span class="op">.</span><span class="fu">process</span>() <span class="op">!==</span> <span class="dv">0</span>)) paulStretch<span class="op">.</span><span class="fu">readQueueLength</span>()</span>
+<span id="cb8-15"><a href="#cb8-15"></a>      <span class="cf">break</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a></span>
+<span id="cb8-17"><a href="#cb8-17"></a>    <span class="cf">case</span> <span class="st">&#39;write&#39;</span><span class="op">:</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a>      paulStretch<span class="op">.</span><span class="fu">write</span>(<span class="bu">event</span><span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">data</span>)</span>
+<span id="cb8-19"><a href="#cb8-19"></a>      <span class="cf">break</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a>    }</span>
+<span id="cb8-21"><a href="#cb8-21"></a>  }</span>
+<span id="cb8-22"><a href="#cb8-22"></a>}</span></code></pre></div>
+<p><a href="https://github.com/sebpiq/paulstretch.js/tree/master/examples/simple">The complete code of the example can be found here</a>.</p>
+</body>
+</html>

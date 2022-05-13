@@ -13,9 +13,9 @@ Before starting, here are a couple of tracks by [Stephen Stamper](https://bitsni
 
 Let's start by sending `aplay` an mp3 file to see how it sounds :
 
-<img src="/audio/terminal-procrastination/wf1.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/1.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/1.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf1.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/1.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/1.mp3" type="audio/mp3">
 </audio>
 ```bash
 cat ~/Music/Cameosis/03-Cameo-PleaseYou.mp3 | aplay -r 8000 -c2
@@ -29,25 +29,25 @@ cat ~/Music/Cameosis/03-Cameo-PleaseYou.mp3 | sox -q -t raw -r 8000 -b 8 -e unsi
 
 With this particular file, as with most files, the result is not very exciting ... mostly white noise. This is because the raw data in a mp3 file is not periodical. There is however a lot of files in your computer that have a repetitive structure, and can make very interesting sounds. For example :
 
-<img src="/audio/terminal-procrastination/wf2.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/2.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/2.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf2.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/2.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/2.mp3" type="audio/mp3">
 </audio>
 ```bash
 sudo cat /var/log/mongodb/mongodb.log | aplay -c2 -f MU_LAW
 ```
 
-<img src="/audio/terminal-procrastination/wf3.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/3.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/3.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf3.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/3.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/3.mp3" type="audio/mp3">
 </audio>
 ```bash
 sudo cat /var/log/mongodb/mongodb.log | aplay -c2 -r 4000 -f MU_LAW
 ```
 
-<img src="/audio/terminal-procrastination/wf4.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/4.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/4.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf4.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/4.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/4.mp3" type="audio/mp3">
 </audio>
 ```bash
 sudo cat /var/lib/mongodb/overwhelmed.0 | aplay -c2 -f MU_LAW
@@ -59,9 +59,9 @@ Above I used a database as input, and log files. These all have a periodical str
 
 You can also use live data as input to `aplay`. For example devices from your system :
 
-<img src="/audio/terminal-procrastination/wf5.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/5.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/5.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf5.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/5.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/5.mp3" type="audio/mp3">
 </audio>
 ```
 sudo cat /dev/vga_arbiter | aplay -r 2000 -c2 -f MU_LAW
@@ -69,9 +69,9 @@ sudo cat /dev/vga_arbiter | aplay -r 2000 -c2 -f MU_LAW
 
 The result here is quite boring as the data is not changing. However we can get more interesting sounds with data from `tcpdump` - which captures the traffic from your network connection :
 
-<img src="/audio/terminal-procrastination/wf6.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/6.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/6.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf6.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/6.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/6.mp3" type="audio/mp3">
 </audio>
 ```
 sudo tcpdump -vvv -i wlan0 | aplay -c2 -r 2000 -f FLOAT_LE
@@ -79,17 +79,17 @@ sudo tcpdump -vvv -i wlan0 | aplay -c2 -r 2000 -f FLOAT_LE
 
 And finally - one that I quite like - you can listen to your webcam by using a software called `ffmpeg` to capture input from the cam and piping it to `aplay` as we did before. The sonic results are surprising deep and complex, though the sound doesn't really change :
 
-<img src="/audio/terminal-procrastination/wf7.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/7.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/7.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf7.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/7.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/7.mp3" type="audio/mp3">
 </audio>
 ```
 ffmpeg -f v4l2 -i /dev/video0 -vf scale=100:100 -f rawvideo pipe: | aplay -r 2000 -c2
 ```
 
-<img src="/audio/terminal-procrastination/wf8.svg" width="100%" height="auto" /><audio controls="">
-  <source src="/audio/terminal-procrastination/8.ogg" type="audio/ogg">
-  <source src="/audio/terminal-procrastination/8.mp3" type="audio/mp3">
+<img src="/articles/2016-01-15-audio-glitches-with-linux-terminal/images/wf8.svg" width="100%" height="auto" /><audio controls="" style="width:100%;">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/8.ogg" type="audio/ogg">
+  <source src="/articles/2016-01-15-audio-glitches-with-linux-terminal/audio/8.mp3" type="audio/mp3">
 </audio>
 ```
 ffmpeg -f v4l2 -i /dev/video0 -vf scale=6000:6000 -f rawvideo pipe: | aplay -r 2000 -c2
