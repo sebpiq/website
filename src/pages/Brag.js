@@ -7,14 +7,7 @@ import Page from '../Page'
 import Link from '../Link'
 import PageTitle from '../PageTitle'
 import './Brag.css'
-
-// `dateStr` format is [[dd/]mm/]yyyy
-const dateToTimestamp = (dateStr) => {
-    const date = new Date()
-    const parsedDate = dateStr.split('/')
-    date.setFullYear(...parsedDate.map(parseFloat).reverse())
-    return +date
-}
+import { dateToTimestamp } from '../utils'
 
 let projectsEvents = []
 rawProjects.forEach((project) => {

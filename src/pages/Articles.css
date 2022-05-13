@@ -1,0 +1,24 @@
+.Articles ul li {
+    color: LightGrey;
+    list-style: disclosure-open;
+}
+
+.Articles li, .Articles__date, .Articles__name {
+    background: var(--bgBlack);
+}
+
+.Articles li {
+    margin-bottom: 1.5em;
+}
+
+.Articles__date {
+    margin-right: 0.5em;
+}
+
+.Articles__name {
+    margin-right: 0.5em;
+}
+
+.Articles__info {
+    font-size: 80%;
+}

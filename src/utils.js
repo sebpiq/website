@@ -36,3 +36,11 @@ export const getRandomEmoji = () => {
 }
 
 export const isExternalUrl = (url) => url.startsWith('https://') || url.startsWith('http://')
+
+// `dateStr` format is [[dd/]mm/]yyyy
+export const dateToTimestamp = (dateStr) => {
+    const date = new Date()
+    const parsedDate = dateStr.split('/')
+    date.setFullYear(...parsedDate.map(parseFloat).reverse())
+    return +date
+}

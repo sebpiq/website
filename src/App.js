@@ -18,6 +18,7 @@ import RacolageXxx from './pages/RacolageXxx'
 import Hyperexistence from './pages/Hyperexistence'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
+import Articles from './pages/Articles'
 
 function App() {
     return (
@@ -36,8 +37,9 @@ function App() {
                     <Route path="/new-weave/" component={NewWeave} />
                     <Route path="/pure-data-and-raspberry-pi-workshops/" component={PureDataRpiWorkshops} />
                     <Route path="/webpd/" component={WebPd} />
-                    <Route path="/possessed-rooms/" component={PossessedRooms} />                
-                    <Route path="/brag/" component={Brag} />                
+                    <Route path="/possessed-rooms/" component={PossessedRooms} />
+                    <Route path="/brag/" component={Brag} />
+                    <Route path="/articles/" component={Articles} />
 
                     <Redirect from="/*" to="/" />
                     <Route component={Index} />
@@ -56,6 +58,11 @@ function Index() {
                 preview="A list of jobs, concerts, lectures."
             />
             <TileContact />
+            <Tile 
+                header="Articles and blog posts" 
+                url="/articles"
+                preview=""
+            />
             <Tile 
                 header="hyperexistence" 
                 activityType="project"
@@ -118,12 +125,6 @@ function Index() {
                 date="2014"
                 url="/pure-data-and-raspberry-pi-workshops"
                 preview="A workshop to teach how to program and design a pocket-sized instrument with Pure Data and Raspberry Pi."
-            />
-            <Tile
-                header="Old Website"
-                activityType="link"
-                date="2012"
-                url="https://sebpiq.github.io/funktion.fm"
             />
         </TileContainer>
     )
