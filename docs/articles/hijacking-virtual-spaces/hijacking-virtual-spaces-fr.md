@@ -90,7 +90,6 @@ DeLappe's messages serve as an ["online memorial to those military personnel who
 
 Le message de DeLappe fonctionne comme ["un mémorial en ligne au personnel militaire qui a été tué", ainsi qu'une "mise en guarde" aux potentielles nouvelles recrues](http://www.delappe.net/project/dead-in-iraq/) (TDLA).
 
-<!-- EMBED : [https://www.youtube.com/embed/VTnuUMM7frk](https://www.youtube.com/embed/VTnuUMM7frk) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VTnuUMM7frk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!--
@@ -106,10 +105,8 @@ Durant les mobilisations du mouvement Black Lives Matter (BLM) en 2020, des rass
 
 Ces jeux offrent tout deux des outils des création qui permirent la confection [d'accessoires virtuels](https://nooksisland.com/designs?search=black+lives+matter) (vêtements, banderolles) sur le [thème de BLM](https://www.ebonix.com/). Des activistes équipèrent alors leurs avatars avec ces accessoires, et se rassemblèrent dans une partie en ligne ou locale pour y défiler et y scander des slogans. Des captures d'écran furent ensuite prises et partagées sur les réseaux sociaux pour sensibiliser le public ou pour lever des fonds pour le mouvement BLM.
 
-<!-- EMBED : [https://twitter.com/GUCClSIMS/status/1269819139364962307](https://twitter.com/GUCClSIMS/status/1269819139364962307) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">tonight’s vigil in south newcrest <a href="https://twitter.com/hashtag/BLMSimsRally?src=hash&amp;ref_src=twsrc%5Etfw">#BLMSimsRally</a> <a href="https://t.co/iQKhQnkrjS">pic.twitter.com/iQKhQnkrjS</a></p>&mdash; 𝖌𝖚𝖈𝖈𝖎 𝖘𝖎𝖒𝖘 (@GUCClSIMS) <a href="https://twitter.com/GUCClSIMS/status/1269819139364962307?ref_src=twsrc%5Etfw">June 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- EMBED : [https://t.co/U0IvnZb6ZP](https://t.co/U0IvnZb6ZP) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thank you for the overwhelming support towards our animal crossing <a href="https://twitter.com/hashtag/BlackLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#BlackLivesMatter</a> march and fundraiser. Big 🖤🖤🖤 to ALL who turned out so passionately and especially <a href="https://twitter.com/pingguino?ref_src=twsrc%5Etfw">@pingguino</a> and <a href="https://twitter.com/mpinner?ref_src=twsrc%5Etfw">@mpinner</a> for creative support. <a href="https://twitter.com/hashtag/acnh?src=hash&amp;ref_src=twsrc%5Etfw">#acnh</a> <a href="https://t.co/U0IvnZb6ZP">pic.twitter.com/U0IvnZb6ZP</a></p>&mdash; Adelle @ happy juneteenth! (@Adellelin) <a href="https://twitter.com/Adellelin/status/1274886969927983108?ref_src=twsrc%5Etfw">June 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <!-- ### Overcoming Censorship -->
@@ -123,18 +120,14 @@ De nombreuses plateformes virtuelles n'étant pas conçues pour être des lieux 
 
 Au début de l'année 2019, le gouvernement de Hong Kong [introduisit une proposition de loi](https://www.nytimes.com/2019/06/10/world/asia/hong-kong-extradition-bill.html) facilitant les arrestations d'opposants politiques par le gouvernement chinois. Cet évènement marqua le début de 2 années de lutte pour la défense de la démocratie, durant lesquelles des millions de personnes manifestèrent dans les rues de Hong-Kong. Il marqua en parallèle le début d'une forte repression du gouvernement hongkongais contre son peuple. Les manifestants durent alors innover afin de rester mobilisés tout en échappant à la surveillance policière. [Des articles rapportent par exemple](https://www.scmp.com/abacus/culture/article/3021560/how-hong-kong-protesters-are-using-tinder-and-pokemon-go) l'utilisation de l'application de rencontre Tinder ou d'Apple AirDrop pour partager des informations sur les prochains évènements et manifestations.
 
-<!-- EMBED : [https://twitter.com/GavinHuang/status/1156988179678785536](https://twitter.com/GavinHuang/status/1156988179678785536) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">So it’s come to this—I’m getting protest info on Tinder <a href="https://t.co/bMfRYCJv1T">pic.twitter.com/bMfRYCJv1T</a></p>&mdash; Gavin Huang 黄藹禧 (@GavinHuang) <a href="https://twitter.com/GavinHuang/status/1156988179678785536?ref_src=twsrc%5Etfw">August 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- EMBED : [https://twitter.com/ziqinglow/status/1157293482383253504](https://twitter.com/ziqinglow/status/1157293482383253504) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Finally got airdropped stuff on the train. Posters calling for a general strike next Monday <a href="https://twitter.com/hashtag/FreedomHK?src=hash&amp;ref_src=twsrc%5Etfw">#FreedomHK</a> <a href="https://t.co/UPTjSLITUY">pic.twitter.com/UPTjSLITUY</a></p>&mdash; Zoe Low (@ziqinglow) <a href="https://twitter.com/ziqinglow/status/1157293482383253504?ref_src=twsrc%5Etfw">August 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <!-- When the Hong Kong demonstrations were slowed down by the pandemic in early 2020, [activists took their political message to Animal Crossing](https://www.wired.co.uk/article/animal-crossing-hong-kong-protests-coronavirus) - just as the BLM protesters did. The video game has granted them a safe virtual space where they can [gather respectfully of social distancing rules](https://www.scmp.com/lifestyle/entertainment/article/3079128/how-nintendos-animal-crossing-became-home-hong-kong). -->
 
 En 2020, quand la pandémie de covid mit un frein aux mobilisations, [les activistes hongkongais investirent alors le jeu Animal Crossing](https://www.wired.co.uk/article/animal-crossing-hong-kong-protests-coronavirus) - tout comme l'avaient fait les activistes BLM. Le jeu vidéo leur assura un "safe space" virtuel où ils purent [se rassembler tout en respectant les gestes barrières](https://www.scmp.com/lifestyle/entertainment/article/3079128/how-nintendos-animal-crossing-became-home-hong-kong).
 
-
-<!-- EMBED : [https://twitter.com/joshuawongcf/status/1245639425331056640](https://twitter.com/joshuawongcf/status/1245639425331056640) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Animal Crossing is Fast Becoming a New Way for Hong Kong Protesters to Fight for Democracy! The <a href="https://twitter.com/hashtag/Covid_19?src=hash&amp;ref_src=twsrc%5Etfw">#Covid_19</a> pandemic has halted public demonstrations, so protesters are taking their cause to <a href="https://twitter.com/hashtag/AnimalCrossing?src=hash&amp;ref_src=twsrc%5Etfw">#AnimalCrossing</a>.<a href="https://t.co/A599kjlYsV">https://t.co/A599kjlYsV</a> <br><br>(This is my island!) <a href="https://t.co/vjBhzw1nUa">pic.twitter.com/vjBhzw1nUa</a></p>&mdash; Joshua Wong 黃之鋒 😷 (@joshuawongcf) <a href="https://twitter.com/joshuawongcf/status/1245639425331056640?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 <!-- In 2020, the freedom of press organization [Reporters Without Borders](https://rsf.org/) (RSF) also demonstrated [a fantastic example](https://uncensoredlibrary.com/en) of use of a video game to avoid state censorship. They put up a Minecraft server which any player in the world can connect to. On this server, there is a spectacular neo-classical library building [painstakingly crafted](https://uncensoredlibrary.com/en/v/making-of) using 12.5 millions of blocks, and in this library building, players can find more than 200 books and articles which have been censored in their country of origin. -->
@@ -145,9 +138,6 @@ En 2020, l'organisation de défense de la liberté de la presse [Reporters Sans 
 
 Bien que le projet ait plutôt eu une portée symbolique (en plus d'être un beau coup de com'), il permit à RSF de réintroduire clandestinement ces ouvrages dans les pays desquels ils avaient été bannis. 
 
-
-
-<!-- EMBED : [https://www.youtube.com/embed/EBI7-pL52GY](https://www.youtube.com/embed/EBI7-pL52GY) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EBI7-pL52GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -185,7 +175,6 @@ Les Yes Men considèrent que les sites qu'ils produisent présentent leurs cible
 
 <img src="assets/yesmen.png" style="width:100%;" />
 
-<!-- EMBED : [https://www.youtube.com/embed/40q4cPNXfF0](https://www.youtube.com/embed/40q4cPNXfF0) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/40q4cPNXfF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Pooper
@@ -208,7 +197,6 @@ Quelques jours plus tard, les deux farceurs révélèrent le canular. Ils annonc
 
 <img src="assets/pooper2.png" style="width:100%;" />
 
-<!-- EMBED : [https://www.youtube.com/embed/eC14Ohz5h4Q](https://www.youtube.com/embed/eC14Ohz5h4Q) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eC14Ohz5h4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -227,7 +215,6 @@ Après six mois, durant lesquels il recruta ses amis pour écrire et publier de 
 
 Son expérience, une critique de l'économie de la réputation en ligne (étoiles, likes, follows, ... ), prouva que Trip Advisor était, selon les dires d'Oobah, une "fausse réalité". Elle illustre aussi plus généralement les effets pervers de la compétition pour l'attention qui amène de nombreuses personnes et entreprises à falsifier leurs profils virtuels, transformant ainsi l'Internet en [un endroit où tout ou presque est fictif](https://nymag.com/intelligencer/2018/12/how-much-of-the-internet-is-fake.html).
 
-<!-- EMBED : [https://www.youtube.com/embed/bqPARIKHbN8](https://www.youtube.com/embed/bqPARIKHbN8) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bqPARIKHbN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -265,7 +252,6 @@ Il est difficile de présenter Anonymous de manière simple et concise, tant c'e
 
 En 2010, Anonymous lança "Operation Payback", une série de cyberattaques [ciblant des organisations financières](https://www.theguardian.com/world/2010/dec/08/wikileaks-visa-mastercard-operation-payback) et organisations de défense du copyright. Anonymous réussit alors à faire crasher plusieurs gros sites web, dont Visa, Mastercard et PayPal, qui [réclamèrent plus tard 3.5 millions de livres Sterling en dommages et intérêts](https://www.bbc.com/news/uk-20449474).
 
-<!-- EMBED : [https://www.youtube.com/embed/bl2_-NYm6yA](https://www.youtube.com/embed/bl2_-NYm6yA) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bl2_-NYm6yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -279,13 +265,10 @@ Les fans de musique pop coréenne (appelés aussi les "K-pop Stans") constituent
 
 En 2020, au plus fort de la mobilisation du mouvement des Black Lives Matter (BLM) aux États-Unis, les K-pop Stans firent une apparition soudaine dans la presse occidentale. Tout commença par leurs efforts pour invisibiliser les tweets et discussions racistes en [innondant les hashtags anti-BLM sur Twitter](https://twitter.com/search?q=(%23WhiteLivesMatter)%20until%3A2020-06-04%20since%3A2020-06-03%20-filter%3Areplies&src=typed_query&f=live). Puis, les Stans continuèrent, en spammant l'application de la police de Dallas avec des fancams (des vidéos en gros plan de leurs idoles), provoquant ainsi son [crash et sa mise hors service temporaire](https://twitter.com/DallasPD/status/1267236088755695618). Enfin, ils parvinrent à [saboter le premier meeting de campagne de Trump post-covid](https://www.nytimes.com/2020/06/21/style/tiktok-trump-rally-tulsa.html). Les Stans avaient organisé une action de boycott en réservant discrètement autant de tickets gratuits qu'ils le pouvaient, puis en ne venant tout simplement pas le jour de l'évènement. Ainsi, environ deux tiers des sièges restèrent vides dans la salle de 19 000 places que l'équipe de Trump avait reservée.
 
-<!-- EMBED : [https://twitter.com/Iuv4enha/status/1268329931236347905](https://twitter.com/Iuv4enha/status/1268329931236347905) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">hope y’all burn in hell :)) <a href="https://twitter.com/hashtag/BlueLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#BlueLivesMatter</a> <a href="https://twitter.com/hashtag/WhiteLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#WhiteLivesMatter</a> <a href="https://t.co/J92Gy5P2gO">pic.twitter.com/J92Gy5P2gO</a></p>&mdash; jun ☕️ SUNOO MONTH (@Iuv4enha) <a href="https://twitter.com/Iuv4enha/status/1268329931236347905?ref_src=twsrc%5Etfw">June 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- EMBED : [https://twitter.com/dreamy_pjm/status/1268330081577054208](https://twitter.com/dreamy_pjm/status/1268330081577054208) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Instead of being a racist asshole you should Stan BLACKPINK <a href="https://twitter.com/hashtag/WhiteLivesMatter?src=hash&amp;ref_src=twsrc%5Etfw">#WhiteLivesMatter</a> <a href="https://t.co/JE3Bz60RO9">pic.twitter.com/JE3Bz60RO9</a></p>&mdash; Samantha ⁷ (@dreamy_pjm) <a href="https://twitter.com/dreamy_pjm/status/1268330081577054208?ref_src=twsrc%5Etfw">June 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- EMBED : [https://twitter.com/DallasPD/status/1267236088755695618](https://twitter.com/DallasPD/status/1267236088755695618) -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Due to technical difficulties iWatch Dallas app will be down temporarily. <a href="https://t.co/zksA1hkVhV">pic.twitter.com/zksA1hkVhV</a></p>&mdash; Dallas Police Dept (@DallasPD) <a href="https://twitter.com/DallasPD/status/1267236088755695618?ref_src=twsrc%5Etfw">May 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
@@ -303,13 +286,10 @@ WSB est une communauté qui existe depuis 2012, comprend aujourd'hui plus de 10 
 
 WSB est né de la culture du trolling d'Anonymous, ainsi que d'une envie des petits porteurs d'actions de se venger de la finance. Bien sûr, comme dans d'autre grandes communautés, les membres ont des profils et des motivations très variées. Ici encore, on peut lire de nombreuses blagues mysogynes. Alors que certains [sont en quête d'une forme de justice contre Wall Street](https://new.reddit.com/r/wallstreetbets/comments/l6omry/an_open_letter_to_melvin_capital_cnbc_boomers_and/), d'autres ne cherchent clairement que des gains financiers.
 
-EMBED : [https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck](https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck)
-<!-- <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="524"></iframe> -->
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="524"></iframe>
 
-EMBED : [https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now](https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now)
-<!-- <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="419"></iframe> -->
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="419"></iframe>
 
-<!-- EMBED : [https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all](https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all) -->
 <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="490"></iframe>
 
 <!-- As subversive as wallstreetbets may seem, the world of finance immediately saw an opportunity to make money. A Wall Street fund started considering [hiring reddit users to help them cash in](https://www.gizmodo.com.au/2021/02/wall-street-fund-wants-to-hire-r-wallstreetbets-users-to-help-pick-meme-stocks/), while the official NASDAQ website started posting [trading tips](https://www.nasdaq.com/articles/meme-stocks-list%3A-the-top-10-reddit-stocks-seeing-chatter-in-the-june-2021-rally-2021-06) on what is now being called "meme stocks". -->
