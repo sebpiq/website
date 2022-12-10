@@ -19,7 +19,7 @@ import RacolageXxx from './pages/RacolageXxx'
 import Hyperexistence from './pages/Hyperexistence'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
-import Articles from './pages/Articles'
+import Articles, { articles } from './pages/Articles'
 
 function App() {
     return (
@@ -62,7 +62,7 @@ function Index() {
             <Tile 
                 header="Articles and blog posts" 
                 url="/articles"
-                preview=""
+                preview={articles.slice(0, 4).map(article => <><div>{article.title}</div><br /></>)}
             />
             <TileContact />
             <Tile 

@@ -7,16 +7,16 @@ import PageTitle from '../PageTitle'
 import './Articles.css'
 import { dateToTimestamp } from '../utils'
 
-let articles = rawArticles.map((rawArticle, i) => {
+export let articles = rawArticles.map((rawArticle, i) => {
     const article = {
         ...rawArticle,
         timestamp: dateToTimestamp(rawArticle.date),
         type: {
             'blog-post': 'blog post',
-            'academic': 'academic article'
+            'academic': 'academic article',
+            'essay': 'essay',
         }[rawArticle.type]
     }
-
     return article
 })
 
