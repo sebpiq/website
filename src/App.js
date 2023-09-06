@@ -17,6 +17,7 @@ import Brag from './pages/Brag'
 import BlogPost from './pages/BlogPost'
 import RacolageXxx from './pages/RacolageXxx'
 import Hyperexistence from './pages/Hyperexistence'
+import WebdevPortfolio from './pages/WebdevPortfolio'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
 import Articles, { articles } from './pages/Articles'
@@ -40,6 +41,7 @@ function App() {
                     <Route path="/webpd/" component={WebPd} />
                     <Route path="/possessed-rooms/" component={PossessedRooms} />
                     <Route path="/brag/" component={Brag} />
+                    <Route path="/webdev-portfolio" component={WebdevPortfolio}></Route>
                     <Route path="/articles/:slug" component={BlogPost} />
                     <Route path="/articles/" component={Articles} />
 
@@ -55,22 +57,32 @@ function Index() {
     return (
         <TileContainer>
             <Tile 
-                header="Past and present activities" 
+                header="CV" 
                 url="/brag"
-                preview="A list of jobs, concerts, lectures."
+                preview="Permanent positions, concerts, teaching, residencies."
+            />
+            <Tile 
+                header="Freelance Dev" 
+                url="/webdev-portfolio"
+                preview="Portfolio of projects and techs used."
             />
             <Tile 
                 header="Articles and blog posts" 
                 url="/articles"
-                preview={articles.slice(0, 4).map(article => <><div>{article.title}</div><br /></>)}
+                preview={articles.slice(0, 4).map((article, i) => 
+                    <div key={i}>
+                        <div>{article.title}</div>
+                        {i < 4 - 1 ? <br /> : null}
+                    </div>
+                )}
             />
             <TileContact />
-            <Tile 
-                header="hyperexistence" 
-                activityType="project"
-                date="2020-..." 
-                url="/hyperexistence"
-                preview="(Work In Progress). A web essay on individualism in late capitalist society."
+            <Tile
+                header="WebPd"
+                activityType="code"
+                date="2012-now"
+                url="/webpd"
+                preview="A compiler for the Pure Data audio programming language allowing to run .pd patches in web pages."
             />
             <Tile 
                 header="racolage.xxx" 
@@ -87,18 +99,25 @@ function Index() {
                 preview="A platform to organize unauthorized shows in the public space, hosted on Wi-Fi networks."
             />
             <Tile 
-                header="La Jetée (movie-concert)" 
-                activityType="project" 
-                date="2016" 
-                url="/la-jetee"
-                preview="A re-score of short film La Jetée by Chris Marker, in a performance that explores digital mobile technology and hyperlocal networks for surround sound diffusion."
-            />
-            <Tile 
                 header="Murmurate"
                 activityType="project"
                 date="2014-2016" 
                 url="/murmurate"
                 preview="A networked system exploring new areas of musical performance and audience participation through the use of mobile technology as a medium for sound diffusion."
+            />
+            <Tile 
+                header="hyperexistence" 
+                activityType="project"
+                date="2020-now" 
+                url="/hyperexistence"
+                preview="(Work In Progress). A web essay on individualism in late capitalist society."
+            />
+            <Tile 
+                header="La Jetée (movie-concert)" 
+                activityType="project" 
+                date="2016" 
+                url="/la-jetee"
+                preview="A re-score of short film La Jetée by Chris Marker, in a performance that explores digital mobile technology and hyperlocal networks for surround sound diffusion."
             />
             <Tile
                 header="Possessed Rooms"
@@ -113,13 +132,6 @@ function Index() {
                 date="2015"
                 url="/new-weave"
                 preview="An experimental sound performance where the performers improvise with small audio snippets recorded and sent live by audience members with their smartphones."
-            />
-            <Tile
-                header="WebPd"
-                activityType="code"
-                date="2012..."
-                url="/webpd"
-                preview="A 100% JavaScript Pure Data runtime using Web Audio API to play audio in the browser."
             />
             <Tile 
                 header="Pure Data and Raspberry Pi"

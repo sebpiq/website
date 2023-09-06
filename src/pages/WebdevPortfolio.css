@@ -1,0 +1,38 @@
+.WebdevPortfolio video {
+    width: 100%;
+}
+
+.WebdevPortfolio h2 {
+    margin-bottom: 0;
+}
+
+.WebdevPortfolio__container {
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.WebdevPortfolio__container:last-child {
+    margin-bottom: 2.5rem;
+}
+
+.WebdevPortfolio__info {
+    margin-bottom: 0.5em;
+}
+
+.WebdevPortfolio__tech {
+    font-size: 80%;
+    opacity: 0.8;
+}
+
+.WebdevPortfolio__description {
+    font-size: 70%;
+    opacity: 0.75;
+}
+
+.WebdevPortfolio__tech::after {
+    content: ', ';
+}
+
+.WebdevPortfolio__tech:last-child::after {
+    content: '';
+}

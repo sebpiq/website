@@ -1,0 +1,9 @@
+.TileContact__link {
+    display: inline-block;
+}
+
+.Tile.TileContact .Tile__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
