@@ -15,6 +15,7 @@ rawProjects.forEach((project) => {
         projectsEvents.push({
             projectName: project.name,
             projectUrl: project.url,
+            type: event.type,
             date: event.date,
             timestamp: dateToTimestamp(event.date),
             venue: event.venue
@@ -53,7 +54,7 @@ export default function() {
             <Link href={event.projectUrl}>
                 <span className="Brag__name">{event.projectName}</span>
             </Link>
-            <span className="Brag__venue">{event.venue}</span>
+            <span className="Brag__venue">{`${event.type === 'residency' ? 'residency, ': ''}${event.venue}`}</span>
         </li>
     ))
 
@@ -93,15 +94,14 @@ export default function() {
         <Page className="Brag">
             <PageTitle text="Present and past activities" />
 
-            <h2>Permanent Positions</h2>
+            <h2>Work experience</h2>
             <ul>{workElems}</ul>
             
-            <h2>Concerts, Exhibitions</h2>
-            <ul>{concertsElems}</ul>
-
             <h2>Teaching</h2>
             <ul>{teachingElems}</ul>
 
+            <h2>Concerts, Exhibitions, Residencies</h2>
+            <ul>{concertsElems}</ul>
         </Page>
     )
 }

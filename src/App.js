@@ -133,13 +133,6 @@ function Index() {
                 url="/new-weave"
                 preview="An experimental sound performance where the performers improvise with small audio snippets recorded and sent live by audience members with their smartphones."
             />
-            <Tile 
-                header="Pure Data and Raspberry Pi"
-                activityType="workshop"
-                date="2014"
-                url="/pure-data-and-raspberry-pi-workshops"
-                preview="A workshop to teach how to program and design a pocket-sized instrument with Pure Data and Raspberry Pi."
-            />
         </TileContainer>
     )
 }
