@@ -1,0 +1,15 @@
+.TileArticles__entry {
+    margin-bottom: 1rem;
+}
+
+.TileArticles__entry a, .TileArticles__entry a:visited {
+    color: #ccc;
+}
+
+.TileArticles__entry:last-child {
+    margin-bottom: 0;
+}
+
+.TileArticles__entry a:hover {
+    text-decoration: underline;
+}

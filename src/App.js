@@ -20,7 +20,8 @@ import Hyperexistence from './pages/Hyperexistence'
 import WebdevPortfolio from './pages/WebdevPortfolio'
 // !!! Must be imported last to override other css properties properly
 import './responsive.css'
-import Articles, { articles } from './pages/Articles'
+import Articles from './pages/Articles'
+import TileArticles from './TileArticles'
 
 function App() {
     return (
@@ -66,16 +67,7 @@ function Index() {
                 url="/webdev-portfolio"
                 preview="Portfolio of projects and techs used."
             />
-            <Tile 
-                header="Articles and blog posts" 
-                url="/articles"
-                preview={articles.slice(0, 4).map((article, i) => 
-                    <div key={i}>
-                        <div>{article.title}</div>
-                        {i < 4 - 1 ? <br /> : null}
-                    </div>
-                )}
-            />
+            <TileArticles />
             <TileContact />
             <Tile
                 header="WebPd"

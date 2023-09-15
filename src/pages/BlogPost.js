@@ -14,6 +14,8 @@ import post3 from '!!raw-loader!./articles/2015-08-25-network-topologies-for-liv
 import post4 from '!!raw-loader!./articles/2016-01-15-audio-glitches-with-linux-terminal/article.html'
 /* eslint import/no-webpack-loader-syntax: off */
 import post5 from '!!raw-loader!./articles/2017-02-23-using-web-audio-api-in-production/article.html'
+/* eslint import/no-webpack-loader-syntax: off */
+import post6 from '!!raw-loader!./articles/2023-09-04-ia-generatives-mort-de-lart/article.html'
 
 const articles = rawArticles.filter(rawArticle => rawArticle.type === 'blog-post')
     .map((rawArticle, i) => ({
@@ -24,6 +26,7 @@ const articles = rawArticles.filter(rawArticle => rawArticle.type === 'blog-post
             '/articles/2015-08-25-network-topologies-for-live-performances': post3,
             '/articles/2016-01-15-audio-glitches-with-linux-terminal': post4,
             '/articles/2017-02-23-using-web-audio-api-in-production': post5,
+            '/articles/2023-09-04-ia-generatives-mort-de-lart': post6,
         }[rawArticle.url]
     }))
 
