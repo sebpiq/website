@@ -171,7 +171,7 @@ WSB is a community that has existed since 2012, has now more than 10 million mem
 
 WSB came out of the trolling culture of Anonymous, as well as a desire of small traders to stick it to big finance. Of course, just like in other large online communities, members are a varied bunch. Here again, misogynistic jokes abound, and people's motivations for taking part vary greatly. While [some are seeking justice](https://new.reddit.com/r/wallstreetbets/comments/l6omry/an_open_letter_to_melvin_capital_cnbc_boomers_and/) against Wall Street, others are clearly in it just for financial gains.
 
-<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/fxwjvr/attention_if_you_produce_anything_of_value_fuck/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="524"></iframe>
+<iframe id="reddit-embed" src="https://new.reddit.com/r/wallstreetbets/comments/l6omry/an_open_letter_to_melvin_capital_cnbc_boomers_and/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="524"></iframe>
 
 <iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="419"></iframe>
 
