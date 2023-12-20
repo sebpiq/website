@@ -37,9 +37,8 @@ Bien sûr, le renouveau de la démocratie qui était prophétisé n'eut pas
 lieu, ou du moins pas comme il avait été annoncé. À sa place advint un
 accaparement de ces espaces virtuels par l'industrie qui produisit la
 marchandisation du comportement humain à grande échelle et une
-polarisation toxique du débat public [^1]. Les activistes de notre époque
-déplorent fréquemment que les mécaniques implacables de l'économie de
-l'attention réduisent au silence les activistes, et neutralisent
+polarisation toxique du débat public [^1]. Les mécaniques implacables de l'économie de
+l'attention réduisent au silence les voix dissidentes, et neutralisent
 progressivement la capacité d'action des populations.
 
 Pourtant, alors même que les entreprises de la tech tentent d'étouffer
@@ -89,7 +88,10 @@ la liste des photos, on peut par exemple trouver une image de l'antenne
 rue de Rivoli de la banque BNP, décorée d'un énorme graffiti BRÛLONS LES
 BANQUES.
 
+::: {style="display:flex;flex-direction:column;align-items:center;padding:1em 0;"}
 <img src="/articles/2022-12-01-hijacking-virtual-spaces/assets/brulons-les-banques.png" style="width:100%;" />
+:::
+
 
 Google Maps contient des tonnes de contenus qui pourraient être
 censurés/classés dans la catégorie spam. On y trouve, entre autres, des
@@ -105,7 +107,10 @@ facilement :
 - Ouvrir la section "avis"
 - Trier par "avis les moins favorables"
 
+::: {style="display:flex;flex-direction:column;align-items:center;padding:1em 0;"}
 <img src="/articles/2022-12-01-hijacking-virtual-spaces/assets/elysee-reviews.png" style="width:100%;" />
+:::
+
 
 Les commentaires pour le palais de l'Élysée sont un bon exemple de ce
 qu'on peut trouver pour à peu près tous les sièges de pouvoir politique
@@ -247,7 +252,11 @@ présenteront jamais elles-mêmes », ce qui rend « ces sites véridiques,
 et non fake ». Ces sites visent en général à dénoncer une organisation
 et ses crimes, souvent dans le cadre d'une campagne plus large.
 
+
+::: {style="display:flex;flex-direction:column;align-items:center;padding:1em 0;"}
 <img src="/articles/2022-12-01-hijacking-virtual-spaces/assets/yesmen.png" style="width:100%;" />
+:::
+
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/40q4cPNXfF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -276,7 +285,11 @@ commentaire sur l'exploitation et l'inanité de nombreuses entreprises
 qui se positionnent comme actrices de la *sharing economy* (« l'économie
 de partage ») [^14].
 
+
+::: {style="display:flex;flex-direction:column;align-items:center;padding:1em 0;"}
 <img src="/articles/2022-12-01-hijacking-virtual-spaces/assets/pooper2.png" style="width:100%;" />
+:::
+
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/eC14Ohz5h4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -414,11 +427,11 @@ blagues misogynes. Alors que certains sont en quête d'une forme de
 justice contre Wall Street, d'autres ne cherchent clairement que des
 gains financiers.
 
-<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l6omry/an_open_letter_to_melvin_capital_cnbc_boomers_and/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;display:block;margin:auto;" scrolling="no" width="640" height="524"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l6omry/an_open_letter_to_melvin_capital_cnbc_boomers_and/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;display:block;margin:auto;" scrolling="no" width="100%" height="316"></iframe>
 
-<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;display:block;margin:auto;" scrolling="no" width="640" height="419"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l7feld/its_power_to_the_traders_now/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;display:block;margin:auto;" scrolling="no" width="100%" height="610"></iframe>
 
-<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;display:block;margin:auto;" scrolling="no" width="640" height="490"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/wallstreetbets/comments/l79jko/im_so_proud_of_you_all/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;display:block;margin:auto;" scrolling="no" width="100%" height="685"></iframe>
 
 Bien que WSB puisse sembler subversif, le monde de la finance trouva
 rapidement le moyen de capitaliser sur cette communauté. Alors qu'un
