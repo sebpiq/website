@@ -18,6 +18,8 @@ import post5 from '!!raw-loader!./articles/2017-02-23-using-web-audio-api-in-pro
 import post6 from '!!raw-loader!./articles/2023-09-04-ia-generatives-mort-de-lart/article.html'
 /* eslint import/no-webpack-loader-syntax: off */
 import post7 from '!!raw-loader!./articles/2022-12-01-hijacking-virtual-spaces/article.html'
+/* eslint import/no-webpack-loader-syntax: off */
+import post8 from '!!raw-loader!./articles/2022-12-05-art-nous-empeche-de-construire/article.html'
 
 const articles = rawArticles.filter(rawArticle => rawArticle.type === 'blog-post')
     .map((rawArticle) => ({
@@ -30,6 +32,7 @@ const articles = rawArticles.filter(rawArticle => rawArticle.type === 'blog-post
             '/articles/2017-02-23-using-web-audio-api-in-production': post5,
             '/articles/2023-09-04-ia-generatives-mort-de-lart': post6,
             '/articles/2022-12-01-hijacking-virtual-spaces': post7,
+            '/articles/2022-12-05-art-nous-empeche-de-construire': post8,
         }[rawArticle.url]
     }))
 
