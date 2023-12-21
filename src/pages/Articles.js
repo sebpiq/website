@@ -42,7 +42,7 @@ export default function() {
 
     return (
         <Page className="Articles">
-            <PageTitle text="Articles and blog posts" />
+            <PageTitle text="Publications" />
             <ul>{ArticleElems}</ul>
         </Page>
     )

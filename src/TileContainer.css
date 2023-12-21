@@ -1,7 +1,6 @@
 .TileContainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2.5em;
+    grid-gap: 2.5rem;
     grid-auto-rows: minmax(100px, auto);
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }

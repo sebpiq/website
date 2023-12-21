@@ -18,13 +18,13 @@
 .Page__scroll_to_top {
     border: none;
     outline: none;
-    color: white;
+    color: var(--fgWhite1);
     font-size: 250%;
     background: none;
     position: fixed;
-    bottom: -0.8em;
-    right: -0.2em;
-    padding: 0.5em;
+    bottom: -0.8rem;
+    right: -0.2rem;
+    padding: 0.5rem;
     cursor: pointer;
 }
 

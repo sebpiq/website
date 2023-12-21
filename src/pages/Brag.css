@@ -14,19 +14,19 @@
 }
 
 .Brag li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .Brag__date {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .Brag__name {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .Brag__sublist {
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 .Brag__sublist li {

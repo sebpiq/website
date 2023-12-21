@@ -1,9 +1,26 @@
-.TileContact__link {
-    display: inline-block;
+.Tile.TileContact .Tile__TileContact__cv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.Tile.TileContact .Tile__TileContact__cv a {
+    color: var(--fgWhite1);
+}
+
+.Tile.TileContact .Tile__footer .TileContact__link {
+    display: inline;
+    margin-right: 1em;
 }
 
 .Tile.TileContact .Tile__body {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.Tile.TileContact .Tile__TileContact__social {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }

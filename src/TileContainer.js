@@ -15,23 +15,35 @@ const mapSizesToProps = ({ width }) => {
     return { columnCount }
 }
 
-const TileContainer = function ({ children, columnCount }) {
-    const minRowsPerColumn = Math.floor(children.length / columnCount)
-    const remainingTiles = children.length - minRowsPerColumn * columnCount
+const TileContainer = function ({ children, columnCount, heroChildren }) {
+    // columnCount - 1 because the hero is the first column
+    const minRowsPerColumn = Math.floor(children.length / (columnCount - 1))
+    const remainingTiles = children.length - minRowsPerColumn * (columnCount - 1)
     let childPointer = 0
-    const columnElems = [...Array(columnCount)].map((_, columnIndex) => {
+    const columnElems = [...Array(columnCount - 1)].map((_, columnIndex) => {
         const extraRow = (columnIndex < remainingTiles ? 1 : 0)
         const rowCount = minRowsPerColumn + extraRow
         const tiles = children.slice(childPointer, childPointer + rowCount)
         childPointer += rowCount
         return (
-            <div key={columnIndex}>{tiles}</div>
+            <div className='TileContainer__column' key={columnIndex}>{tiles}</div>
         )
     })
 
     return (
         <div className="TileContainer">
-            {columnElems}
+            {columnCount > 1 ? 
+                <>
+                    <div className="TileContainer__hero">
+                        {heroChildren}
+                    </div>
+                    {columnElems}
+                </>: 
+                <div className='TileContainer__column'>
+                    {heroChildren}
+                    {children}
+                </div>
+            }
         </div>
     )
 }

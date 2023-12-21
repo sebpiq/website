@@ -55,20 +55,15 @@ function App() {
 }
 
 function Index() {
-    return (
-        <TileContainer>
-            <Tile 
-                header="CV" 
-                url="/brag"
-                preview="Permanent positions, concerts, teaching, residencies."
-            />
-            <Tile 
-                header="Freelance Dev" 
-                url="/webdev-portfolio"
-                preview="Portfolio of projects and techs used."
-            />
+    const heroChildren = (
+        <>
             <TileArticles />
             <TileContact />
+        </>
+    )
+
+    return (
+        <TileContainer heroChildren={heroChildren}>
             <Tile
                 header="WebPd"
                 activityType="code"

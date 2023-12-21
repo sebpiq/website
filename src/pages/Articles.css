@@ -8,15 +8,15 @@
 }
 
 .Articles li {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
 .Articles__date {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .Articles__name {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .Articles__info {

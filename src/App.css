@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
     --bgBlack: #181818;
+    --fgWhite1: white;
+    --fgWhite2: #ccc;
+    --fgWhite3: #aaa;
 }
 
 body, html, .App, #root {
@@ -11,13 +14,13 @@ body, html, .App, #root {
     /* fallback */
     background-color: black;
     background-color: var(--bgBlack);
-    color: white;
+    color: var(--fgWhite1);
     font-family: 'Cutive Mono', monospace;
     font-size: 18px;
 }
 
 a, a:visited {
-    color: white;
+    color: var(--fgWhite1);
     text-decoration: none;
 }
 
